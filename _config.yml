@@ -80,4 +80,4 @@ theme: landscape
 deploy:
   type: git
   repo: https://github.com/Ciaohi/ciaohi.github.io.git
-  branch : public
+  branch : master
