@@ -163,6 +163,90 @@
           <div id="js-content" class="content-ll">
             
   
+    <article id="post-Linux-常用命令详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+  <div class="article-inner">
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2019/10/18/Linux-常用命令详解/">Linux 常用命令详解</a>
+    </h1>
+  
+
+        
+        <a href="/2019/10/18/Linux-常用命令详解/" class="archive-article-date">
+  	<time datetime="2019-10-18T00:13:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-18</time>
+</a>
+        
+      </header>
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h1 id="ps-命令详解"><a href="#ps-命令详解" class="headerlink" title="ps 命令详解"></a>ps 命令详解</h1><h2 id="ps-概述"><a href="#ps-概述" class="headerlink" title="ps 概述"></a>ps 概述</h2><p>Linux中的ps命令是Process Status的缩写。ps命令用来列出系统中当前运行的那些进程。ps命令列出的是当前那些进程的快照，就是执行ps命令的那个时刻的那些进程，如果想要动态的显示进程信息，就可以使<br>用top命令。</p>
+<h3 id="linux上进程有5种状态及对应的状态码"><a href="#linux上进程有5种状态及对应的状态码" class="headerlink" title="linux上进程有5种状态及对应的状态码"></a>linux上进程有5种状态及对应的状态码</h3><p>1.R运行(正在运行或在运行队列中等待)  runnable (on run queue)<br>2.S中断(休眠中, 受阻, 在等待某个条件的形成或接受到信号) sleeping<br>3.D不可中断(收到信号不唤醒和不可运行, 进程必须等待直到有中断发生) uninterruptible sleep (usually IO)<br>4.Z僵死(进程已终止, 但进程描述符存在, 直到父进程调用wait4()系统调用后释放)a defunct (”zombie”) process<br>5.T停止(进程收到SIGSTOP, SIGSTP, SIGTIN, SIGTOU信号后停止运行运行) traced or stopped</p>
+<h2 id="ps使用"><a href="#ps使用" class="headerlink" title="ps使用"></a>ps使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用法: ps [参数]</span><br></pre></td></tr></table></figure>
+
+<h3 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h3><ul>
+<li>a 显示一个终端的所有进程，除了会话引线</li>
+<li>u uid or username 选择有效的用户id或者是用户名</li>
+<li>x 显示没有控制终端的进程，同时显示各个命令的具体路径。dx不可合用。（utility）</li>
+</ul>
+<h2 id="示例-ps-aux"><a href="#示例-ps-aux" class="headerlink" title="示例:ps -aux"></a>示例:ps -aux</h2><p>最常用的方法是ps -aux,然后再利用一个管道符号导向到grep去查找特定的进程,然后再对特定的进程进行操作。</p>
+<h1 id="grep-命令详解"><a href="#grep-命令详解" class="headerlink" title="grep 命令详解"></a>grep 命令详解</h1><h2 id="grep-概述"><a href="#grep-概述" class="headerlink" title="grep 概述"></a>grep 概述</h2><p>grep (global search regular expression(RE) and print out the line,全面搜索正则表达式并把行打印出来)是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Linux Commands</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
+      
+
+      
+        <p class="article-more-link">
+          <a class="article-more-a" href="/2019/10/18/Linux-常用命令详解/">展开全文 >></a>
+        </p>
+      
+
+      
+      <div class="clearfix"></div>
+    </div>
+  </div>
+</article>
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
+        </div>
+        
+        
+    </div>
+</aside>
+
+
+
+
+  
     <article id="post-git基本操作命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
   <div class="article-inner">
     
@@ -287,7 +371,8 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id><a href="#" class="headerlink" title></a></h1>
+        <h2 id="登录流程"><a href="#登录流程" class="headerlink" title="登录流程"></a>登录流程</h2><p>1.用户向GitHub identity发送请求，获取权限<br>2.GitHub授权成功返回网站<br>3.返回的一个code去访问API得到token</p>
+
       
 
       
@@ -366,7 +451,7 @@
 </ul>
 <p>1.当前标签的问题数 java 3,js2<br>2.每一个问题的回复数 java2 js30<br>3.权重priority=5*question count +comments</p>
 <h2 id="计算优先级"><a href="#计算优先级" class="headerlink" title="计算优先级"></a>计算优先级</h2><ul>
-<li>PriorityQueue</li>
+<li>PriorityQueue 基于java的优先队列</li>
 </ul>
 <p>1.PriorityQueue是一种无界的，线程不安全的队列<br>2.PriorityQueue是一种通过数组实现的，并拥有优先级的队列<br>3.PriorityQueue存储的元素要求必须是可比较的对象， 如果不是就必须明确指定比较器</p>
 <h2 id="使用优先队列排序"><a href="#使用优先队列排序" class="headerlink" title="使用优先队列排序"></a>使用优先队列排序</h2>
@@ -655,15 +740,19 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color1">authorize login</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">Linux Commands</a>
+              </li>
+             
+              <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color2">Java Spring Boot</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color1">git github</a>
-              </li>
-             
-              <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color1">authorize login</a>
               </li>
             
             <div class="clearfix"></div>
