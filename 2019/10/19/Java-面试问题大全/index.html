@@ -6,18 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://Ciaohi.github.io">
-  <title>Ciaohi的博客</title>
+  <title>Java 面试问题大全 | Ciaohi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="技术博客，并发编程，Java">
-<meta property="og:type" content="website">
-<meta property="og:title" content="Ciaohi的博客">
-<meta property="og:url" content="https://Ciaohi.github.io/index.html">
+  <meta name="description" content="说明内存泄漏和内存溢出的区别和联系，结合项目经验描述Java 程序中如何检测？如何解决？ 内存溢出 out of memory，是指程序在申请内存时，没有足够的内存空间供其使用，出现 out of memory；比如申请了一个 integer,但给它存了long 才能存下的数，那就是内存溢出。   内存泄露 memory leak，是指程序在申请内存后，无法释放已申请的内存空间，一次内存泄露危害可">
+<meta name="keywords" content="Java,面试">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Java 面试问题大全">
+<meta property="og:url" content="https://Ciaohi.github.io/2019/10/19/Java-面试问题大全/index.html">
 <meta property="og:site_name" content="Ciaohi的博客">
-<meta property="og:description" content="技术博客，并发编程，Java">
+<meta property="og:description" content="说明内存泄漏和内存溢出的区别和联系，结合项目经验描述Java 程序中如何检测？如何解决？ 内存溢出 out of memory，是指程序在申请内存时，没有足够的内存空间供其使用，出现 out of memory；比如申请了一个 integer,但给它存了long 才能存下的数，那就是内存溢出。   内存泄露 memory leak，是指程序在申请内存后，无法释放已申请的内存空间，一次内存泄露危害可">
 <meta property="og:locale" content="default">
+<meta property="og:updated_time" content="2019-10-20T10:43:52.686Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Ciaohi的博客">
-<meta name="twitter:description" content="技术博客，并发编程，Java">
+<meta name="twitter:title" content="Java 面试问题大全">
+<meta name="twitter:description" content="说明内存泄漏和内存溢出的区别和联系，结合项目经验描述Java 程序中如何检测？如何解决？ 内存溢出 out of memory，是指程序在申请内存时，没有足够的内存空间供其使用，出现 out of memory；比如申请了一个 integer,但给它存了long 才能存下的数，那就是内存溢出。   内存泄露 memory leak，是指程序在申请内存后，无法释放已申请的内存空间，一次内存泄露危害可">
   
     <link rel="alternative" href="/atom.xml" title="Ciaohi的博客" type="application/atom+xml">
   
@@ -161,16 +163,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-    <article id="post-Java-面试问题大全" class="article article-type-post  article-index" itemscope itemprop="blogPost">
+            <article id="post-Java-面试问题大全" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/19/Java-面试问题大全/">Java 面试问题大全</a>
+    <h1 class="article-title" itemprop="name">
+      Java 面试问题大全
     </h1>
   
 
@@ -341,6 +341,27 @@
       
 
       
+        <div class="page-reward">
+          <a href="javascript:;" class="page-reward-btn tooltip-top">
+            <div class="tooltip tooltip-east">
+            <span class="tooltip-item">
+              赏
+            </span>
+            <span class="tooltip-content">
+              <span class="tooltip-text">
+                <span class="tooltip-inner">
+                  <p class="reward-p"><i class="icon icon-quo-left"></i>谢谢你请我吃糖果<i class="icon icon-quo-right"></i></p>
+                  <div class="reward-box">
+                    
+                    
+                  </div>
+                </span>
+              </span>
+            </span>
+          </div>
+          </a>
+        </div>
+      
     </div>
     <div class="article-info article-info-index">
       
@@ -363,16 +384,75 @@
       
 
       
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/19/Java-面试问题大全/">展开全文 >></a>
-        </p>
-      
 
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
+        </div>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=https://Ciaohi.github.io/2019/10/19/Java-面试问题大全/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
       
       <div class="clearfix"></div>
     </div>
   </div>
 </article>
+
+  
+<nav id="article-nav">
+  
+  
+    <a href="/2019/10/19/美团面试HashMap和TreeMap的区别/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">美团面试Q&amp;A</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -392,739 +472,14 @@
 
 
 
-
   
-    <article id="post-美团面试HashMap和TreeMap的区别" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
   
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/19/美团面试HashMap和TreeMap的区别/">美团面试Q&amp;A</a>
-    </h1>
   
 
-        
-        <a href="/2019/10/19/美团面试HashMap和TreeMap的区别/" class="archive-article-date">
-  	<time datetime="2019-10-19T03:23:25.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-19</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="面试现场"><a href="#面试现场" class="headerlink" title="面试现场"></a>面试现场</h2><p>Q1:你了解HashMap和TreeMap的区别吗?</p>
-<p>A1:HashMap是一个常用的<strong>数据结构</strong>，它主要用于我们有固定值(key)获取内容的场景，时间复杂度可以最快优化到O(1),效果不好的时候时间复杂度是O(logN)或者O(N)。虽然固定值查找提高了速度,但是HashMap不能保证固定值,也就是key的顺序,所以这个时候<strong>TreeMap</strong>为了解决这个问题就出现了,虽然它的查找、删除、更新的时间复杂度都是O(logN),但是他可以保证key的有序性.</p>
-<hr>
-<p>Q2:那你和我说说HashMap和TreeMap的底层实现有什么不同,才导致的他们有这么大的差异呢?</p>
-<p>A2:HashMap使用的是数组(桶)和哈希的方式实现，巧妙通过key的哈希路由到每一个数组用于存放内容，这时候通过key获取value的时间复杂度就是O(1),当然因为key的哈希可能碰撞,所以就需要针对碰撞的时候做处理,HashMap里面每一个数组(桶)里面存的其实是一个<strong>链表</strong>，key的<strong>哈希冲突</strong>以后会追加到链表上面,这时候再通过Key获取value的时候时间复杂度就变成了O(n),那么数据碰撞越来越多的时候岂不是导致查询很慢?为了优化这个时间复杂度,HashMap当一个key碰撞次数超过<em>TREEIFY THRESHOLD</em>的时候就会把链表转换成<strong>红黑树</strong>，这样虽然插入的时候也增加了时间复杂度，但是对于频繁哈希碰撞的问题的查询效率有很大的提高，使得查询的时间复杂度变成了O(logN)。说到红黑树就把HashMap和TreeMap联系到了一起,因为TreeMap的底层实现就是红黑树。</p>
-<hr>
-<p>Q3:既然你说到了红黑树，那么我想问下为什么采用的是红黑树,而不是二叉搜索树呢?</p>
-<p>A3:通常我们听到<strong>二叉搜索树</strong>的时候以为他是平衡树,其实不是。它只是左子树的值小于根节点，右子树的值大于根节点,如果构建根节点以后插入的数据是有序的，那么构造出来的二叉搜索树就不是平衡树，而是一个链表,那么它的时间复杂度就是O(n)。然而红黑树呢？就是通过每个节点标色的方式，每次更新数据后再平衡，以此来保证其查找效率。</p>
-<hr>
-<p>Q4:那既然你说到这里了，再展开说一下它是怎么做到的每次插入都平衡?</p>
-<p>A4:红黑树因为每个节点都有红色或者黑色这两种颜色，当然它也有一些特性，比如  </p>
-<ol>
-<li>根节点是黑色的。</li>
-<li>红色节点的子节点必须是黑色并且父节点也是黑色的。</li>
-<li>任何一条路径的黑色节点个数相同。</li>
-</ol>
-<p>它通过这些特性再重新插入的时候做着色处理，配合左旋，右旋来达到最终的平衡。所以可以理解黑色红色其实是为了更好的辅助平衡。当有了这个着色以后配合红黑树的性质，就可以定义出来一个平衡的公式如下.首先插入的元素必须是红色,因为黑色破坏他的性质的几率更大。</p>
-<ul>
-<li>假设X是新插入的节点，P是父节点,Y是叔父节点,G是祖父节点,P为G的左孩子。</li>
-</ul>
-<ol>
-<li>当Y为红色 -&gt;P、Y变黑,G变红,X变G</li>
-<li>当Y为黑色,X是右孩子-&gt;左旋P,X变G</li>
-<li>当Y为黑色,X为左孩子-&gt;G变红,P变黑,右旋G</li>
-<li>当P为G的有孩子的时候,直接做镜像操作即可</li>
-</ol>
-<ul>
-<li><a href="https://www.bilibili.com/video/av23890827" target="_blank" rel="noopener">参考资料</a></li>
-</ul>
-<hr>
-<p>Q5:掌握的还不错,那来说说HashMap是不是线程安全的呢?<br>A5:这个问题我不太清楚,要不然我回去研究一下,明天找你考考我?</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">数据结构</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">map</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/19/美团面试HashMap和TreeMap的区别/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Maven-依赖" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/18/Maven-依赖/">Maven 依赖</a>
-    </h1>
   
 
-        
-        <a href="/2019/10/18/Maven-依赖/" class="archive-article-date">
-  	<time datetime="2019-10-18T08:16:15.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/18/Maven-依赖/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Linux-常用命令详解" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/18/Linux-常用命令详解/">Linux 常用命令详解</a>
-    </h1>
   
 
-        
-        <a href="/2019/10/18/Linux-常用命令详解/" class="archive-article-date">
-  	<time datetime="2019-10-18T00:13:21.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="ps-命令详解"><a href="#ps-命令详解" class="headerlink" title="ps 命令详解"></a>ps 命令详解</h1><h2 id="ps-概述"><a href="#ps-概述" class="headerlink" title="ps 概述"></a>ps 概述</h2><p>Linux中的ps命令是Process Status的缩写。ps命令用来列出系统中当前运行的那些进程。ps命令列出的是当前那些进程的快照，就是执行ps命令的那个时刻的那些进程，如果想要动态的显示进程信息，就可以使<br>用top命令。</p>
-<h3 id="linux上进程有5种状态及对应的状态码"><a href="#linux上进程有5种状态及对应的状态码" class="headerlink" title="linux上进程有5种状态及对应的状态码"></a>linux上进程有5种状态及对应的状态码</h3><p>1.R运行(正在运行或在运行队列中等待)  runnable (on run queue)<br>2.S中断(休眠中, 受阻, 在等待某个条件的形成或接受到信号) sleeping<br>3.D不可中断(收到信号不唤醒和不可运行, 进程必须等待直到有中断发生) uninterruptible sleep (usually IO)<br>4.Z僵死(进程已终止, 但进程描述符存在, 直到父进程调用wait4()系统调用后释放)a defunct (”zombie”) process<br>5.T停止(进程收到SIGSTOP, SIGSTP, SIGTIN, SIGTOU信号后停止运行运行) traced or stopped</p>
-<h2 id="ps使用"><a href="#ps使用" class="headerlink" title="ps使用"></a>ps使用</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">用法: ps [参数]</span><br></pre></td></tr></table></figure>
-
-<h3 id="参数说明"><a href="#参数说明" class="headerlink" title="参数说明"></a>参数说明</h3><ul>
-<li>a 显示一个终端的所有进程，除了会话引线</li>
-<li>u uid or username 选择有效的用户id或者是用户名</li>
-<li>x 显示没有控制终端的进程，同时显示各个命令的具体路径。dx不可合用。（utility）</li>
-</ul>
-<h2 id="示例-ps-aux"><a href="#示例-ps-aux" class="headerlink" title="示例:ps -aux"></a>示例:ps -aux</h2><p>最常用的方法是ps -aux,然后再利用一个管道符号导向到grep去查找特定的进程,然后再对特定的进程进行操作。</p>
-<h1 id="grep-命令详解"><a href="#grep-命令详解" class="headerlink" title="grep 命令详解"></a>grep 命令详解</h1><h2 id="grep-概述"><a href="#grep-概述" class="headerlink" title="grep 概述"></a>grep 概述</h2><p>grep (global search regular expression(RE) and print out the line,全面搜索正则表达式并把行打印出来)是一种强大的文本搜索工具，它能使用正则表达式搜索文本，并把匹配的行打印出来。</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Linux Commands</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/18/Linux-常用命令详解/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-ssh连接服务器" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/18/ssh连接服务器/">ssh连接服务器与发布项目操作</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/18/ssh连接服务器/" class="archive-article-date">
-  	<time datetime="2019-10-18T00:08:56.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-18</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>登录远程主机<br>ssh 用户名@远程主机地址</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color4">ssh</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/18/ssh连接服务器/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-git基本操作命令" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/17/git基本操作命令/">git基本操作命令</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/17/git基本操作命令/" class="archive-article-date">
-  	<time datetime="2019-10-17T04:03:33.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-17</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="快速开始"><a href="#快速开始" class="headerlink" title="快速开始"></a>快速开始</h2><p><a href="https://www.runoob.com/git/git-tutorial.html" target="_blank" rel="noopener">菜鸟教程</a></p>
-<ul>
-<li>生成sshkey，获得仓库管理权限.</li>
-<li>.gitignore把不想上传管理的文件加到这里来</li>
-</ul>
-<h3 id="初始化代码仓库"><a href="#初始化代码仓库" class="headerlink" title="初始化代码仓库"></a>初始化代码仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git init</span><br></pre></td></tr></table></figure>
-
-<h3 id="关联远程仓库"><a href="#关联远程仓库" class="headerlink" title="关联远程仓库"></a>关联远程仓库</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote add origin 仓库地址</span><br></pre></td></tr></table></figure>
-
-<h3 id="添加代码"><a href="#添加代码" class="headerlink" title="添加代码"></a>添加代码</h3><p>添加到暂存区</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git add</span><br></pre></td></tr></table></figure>
-
-<h3 id="提交代码"><a href="#提交代码" class="headerlink" title="提交代码"></a>提交代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git commit -m <span class="string">"变化信息注释"</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="查看日志"><a href="#查看日志" class="headerlink" title="查看日志"></a>查看日志</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">log</span></span><br></pre></td></tr></table></figure>
-
-<h3 id="查看详细信息"><a href="#查看详细信息" class="headerlink" title="查看详细信息"></a>查看详细信息</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git show commit id</span><br></pre></td></tr></table></figure>
-
-<h3 id="上传到远程仓库、强制推送"><a href="#上传到远程仓库、强制推送" class="headerlink" title="上传到远程仓库、强制推送"></a>上传到远程仓库、强制推送</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">git push</span><br><span class="line">git push -f origin master</span><br></pre></td></tr></table></figure>
-
-<h3 id="拉取远程代码"><a href="#拉取远程代码" class="headerlink" title="拉取远程代码"></a>拉取远程代码</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git pull origin master</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建分支"><a href="#创建分支" class="headerlink" title="创建分支"></a>创建分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git branch 名字</span><br></pre></td></tr></table></figure>
-
-<h3 id="切换分支"><a href="#切换分支" class="headerlink" title="切换分支"></a>切换分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git checkout 名字</span><br></pre></td></tr></table></figure>
-
-<h3 id="创建分支并切换到分支"><a href="#创建分支并切换到分支" class="headerlink" title="创建分支并切换到分支"></a>创建分支并切换到分支</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line">git checkout -b 名字</span><br></pre></td></tr></table></figure>
-
-<h3 id="查看远程仓库，以及与本地仓库的关系"><a href="#查看远程仓库，以及与本地仓库的关系" class="headerlink" title="查看远程仓库，以及与本地仓库的关系"></a>查看远程仓库，以及与本地仓库的关系</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git remote show origin</span><br></pre></td></tr></table></figure>
-
-<h3 id="设置远端分支上传"><a href="#设置远端分支上传" class="headerlink" title="设置远端分支上传"></a>设置远端分支上传</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git --<span class="built_in">set</span>-upstream origin 名字</span><br></pre></td></tr></table></figure>
-
-<h3 id="克隆项目"><a href="#克隆项目" class="headerlink" title="克隆项目"></a>克隆项目</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">git <span class="built_in">clone</span> 项目</span><br></pre></td></tr></table></figure>
-
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">git github</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/17/git基本操作命令/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Git-hub第三方授权登录" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/16/Git-hub第三方授权登录/">Git hub第三方授权登录</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/16/Git-hub第三方授权登录/" class="archive-article-date">
-  	<time datetime="2019-10-16T06:22:18.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-16</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="登录流程"><a href="#登录流程" class="headerlink" title="登录流程"></a>登录流程</h2><p>1.用户向GitHub identity发送请求，获取权限<br>2.GitHub授权成功返回网站<br>3.返回的一个code去访问API得到token</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color1">authorize login</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/16/Git-hub第三方授权登录/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-Spring-Boot-定时器实战" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/15/Spring-Boot-定时器实战/">Spring Boot 定时器实战</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/15/Spring-Boot-定时器实战/" class="archive-article-date">
-  	<time datetime="2019-10-15T08:29:22.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h1 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h1><p>定时时间的循环，比如说一家餐馆开店营业,必须每天早晨去买菜先把食材准备好，如果顾客来了才想起去买做这道菜的原材料，就有延时性了，顾客体验不好。先把食材准备好<br>一样的道理，用定时任务先把要做的事做好，即准备好热门话题，而不是等用户访问了才去查热门话题，用户体验的话就没有延迟性了，体验效果就会好了</p>
-<h2 id="热门话题"><a href="#热门话题" class="headerlink" title="热门话题"></a>热门话题</h2><ul>
-<li>权重</li>
-</ul>
-<p>1.当前标签的问题数 java 3,js2<br>2.每一个问题的回复数 java2 js30<br>3.权重priority=5*question count +comments</p>
-<h2 id="计算优先级"><a href="#计算优先级" class="headerlink" title="计算优先级"></a>计算优先级</h2><ul>
-<li>PriorityQueue 基于java的优先队列</li>
-</ul>
-<p>1.PriorityQueue是一种无界的，线程不安全的队列<br>2.PriorityQueue是一种通过数组实现的，并拥有优先级的队列<br>3.PriorityQueue存储的元素要求必须是可比较的对象， 如果不是就必须明确指定比较器</p>
-<h2 id="使用优先队列排序"><a href="#使用优先队列排序" class="headerlink" title="使用优先队列排序"></a>使用优先队列排序</h2>
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">Java Spring Boot</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/15/Spring-Boot-定时器实战/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-我的第一篇博客" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/15/我的第一篇博客/">hexo操作方法</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/15/我的第一篇博客/" class="archive-article-date">
-  	<time datetime="2019-10-15T03:02:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <h2 id="我的第一篇博客"><a href="#我的第一篇博客" class="headerlink" title="我的第一篇博客"></a>我的第一篇博客</h2><p>这是我的一个技术博客,会记录一些博客内容,同时也会同步博客内容到我的网站 <code>学习社区</code>。</p>
-<h2 id="文章"><a href="#文章" class="headerlink" title="文章"></a>文章</h2><p>我正在写博客<br>先执行hexo generate命令，生成静态文件了，再执行hexo deploy上传，上传是只会上传public中生成的文件。</p>
-<h2 id="致谢"><a href="#致谢" class="headerlink" title="致谢"></a>致谢</h2><p>感谢你的阅读</p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/15/我的第一篇博客/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
-    <article id="post-hello-world" class="article article-type-post  article-index" itemscope itemprop="blogPost">
-  <div class="article-inner">
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2019/10/15/hello-world/">Hello World</a>
-    </h1>
-  
-
-        
-        <a href="/2019/10/15/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-15T02:06:09.704Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-15</time>
-</a>
-        
-      </header>
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
-
-      
-
-      
-    </div>
-    <div class="article-info article-info-index">
-      
-      
-      
-
-      
-        <p class="article-more-link">
-          <a class="article-more-a" href="/2019/10/15/hello-world/">展开全文 >></a>
-        </p>
-      
-
-      
-      <div class="clearfix"></div>
-    </div>
-  </div>
-</article>
-
-<aside class="wrap-side-operation">
-    <div class="mod-side-operation">
-        
-        <div class="jump-container" id="js-jump-container" style="display:none;">
-            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
-                <i class="icon-font icon-back"></i>
-            </a>
-            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
-                <i class="icon-font icon-plane jump-plane"></i>
-            </div>
-        </div>
-        
-        
-    </div>
-</aside>
-
-
-
-
-  
   
 
 
@@ -1147,8 +502,8 @@
     <script>
 	var yiliaConfig = {
 		mathjax: false,
-		isHome: true,
-		isPost: false,
+		isHome: false,
+		isPost: true,
 		isArchive: false,
 		isTag: false,
 		isCategory: false,
