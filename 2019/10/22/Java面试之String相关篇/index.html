@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://Ciaohi.github.io">
-  <title>Hello World | Ciaohi的博客</title>
+  <title>Java面试之String相关篇 | Ciaohi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="Java substring() 方法 substring() 方法返回字符串的子字符串。  语法1public String substring(int beginIndex)  或者 1public String substring(int beginIndex, int endIndex)  参数 beginIndex – 起始索引（包括）, 索引从 0 开始。 endIndex – 结束索">
+<meta name="keywords" content="Java,String">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://Ciaohi.github.io/2019/10/15/hello-world/index.html">
+<meta property="og:title" content="Java面试之String相关篇">
+<meta property="og:url" content="https://Ciaohi.github.io/2019/10/22/Java面试之String相关篇/index.html">
 <meta property="og:site_name" content="Ciaohi的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Java substring() 方法 substring() 方法返回字符串的子字符串。  语法1public String substring(int beginIndex)  或者 1public String substring(int beginIndex, int endIndex)  参数 beginIndex – 起始索引（包括）, 索引从 0 开始。 endIndex – 结束索">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-15T02:06:09.704Z">
+<meta property="og:updated_time" content="2019-10-22T07:08:31.873Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Java面试之String相关篇">
+<meta name="twitter:description" content="Java substring() 方法 substring() 方法返回字符串的子字符串。  语法1public String substring(int beginIndex)  或者 1public String substring(int beginIndex, int endIndex)  参数 beginIndex – 起始索引（包括）, 索引从 0 开始。 endIndex – 结束索">
   
     <link rel="alternative" href="/atom.xml" title="Ciaohi的博客" type="application/atom+xml">
   
@@ -162,39 +163,105 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java面试之String相关篇" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Java面试之String相关篇
     </h1>
   
 
         
-        <a href="/2019/10/15/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-15T02:06:09.704Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-15</time>
+        <a href="/2019/10/22/Java面试之String相关篇/" class="archive-article-date">
+  	<time datetime="2019-10-22T02:13:46.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
+        <h2 id="Java-substring-方法"><a href="#Java-substring-方法" class="headerlink" title="Java substring() 方法"></a>Java substring() 方法</h2><ul>
+<li>substring() 方法返回字符串的子字符串。</li>
+</ul>
+<h3 id="语法"><a href="#语法" class="headerlink" title="语法"></a>语法</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public String substring(int beginIndex)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
+<p>或者</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">public String substring(int beginIndex, int endIndex)</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
+<h3 id="参数"><a href="#参数" class="headerlink" title="参数"></a>参数</h3><ul>
+<li>beginIndex – 起始索引（包括）, 索引从 0 开始。</li>
+<li>endIndex – 结束索引（不包括）。<h3 id="返回值"><a href="#返回值" class="headerlink" title="返回值"></a>返回值</h3></li>
+</ul>
+<p>字符串</p>
+<h3 id="实例"><a href="#实例" class="headerlink" title="实例"></a>实例</h3><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String args[])</span> </span>&#123;</span><br><span class="line">        String Str = <span class="keyword">new</span> String(<span class="string">"ciaohi.github.io"</span>);</span><br><span class="line"> </span><br><span class="line">        System.out.print(<span class="string">"返回值 :"</span> );</span><br><span class="line">        System.out.println(Str.substring(<span class="number">4</span>) );</span><br><span class="line"> </span><br><span class="line">        System.out.print(<span class="string">"返回值 :"</span> );</span><br><span class="line">        System.out.println(Str.substring(<span class="number">4</span>, <span class="number">10</span>) );</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
+<h3 id="怎样将-GB2312-编码的字符串转换为-ISO-8859-1-编码的字符串？"><a href="#怎样将-GB2312-编码的字符串转换为-ISO-8859-1-编码的字符串？" class="headerlink" title="怎样将 GB2312 编码的字符串转换为 ISO-8859-1 编码的字符串？"></a>怎样将 GB2312 编码的字符串转换为 ISO-8859-1 编码的字符串？</h3><ul>
+<li>代码如下所示:<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String s1 = <span class="string">"你好"</span>;</span><br><span class="line">String s2 = newString(s1.getBytes(<span class="string">"GB2312"</span>), <span class="string">"ISO-8859-1"</span>);</span><br></pre></td></tr></table></figure>
 
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+</li>
+</ul>
+<h2 id="实现-String-类的-replaceAll-方法"><a href="#实现-String-类的-replaceAll-方法" class="headerlink" title="实现 String 类的 replaceAll 方法"></a>实现 String 类的 replaceAll 方法</h2><ul>
+<li>replaceAll 方法的本质是使用正则表达式进行匹配，最终调用的其实是 Matcher 对象的 replaceAll 方法。</li>
+</ul>
+<h2 id="是否可以继承-String-类"><a href="#是否可以继承-String-类" class="headerlink" title="是否可以继承 String 类?"></a>是否可以继承 String 类?</h2><ul>
+<li>不可以，因为 String 类有 final 修饰符，而 final 修饰的类是不能被继承的，实现细节不允许改变。</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">public final class String implements java.io.Serializable, </span><br><span class="line">Comparable&lt;String&gt;, CharSequence</span><br></pre></td></tr></table></figure>
+
+<h2 id="给定两个字符串-s-和-t，-写一个函数来决定是否-t-是-s-的重组词。你可以假设字符串只包含小写字母。"><a href="#给定两个字符串-s-和-t，-写一个函数来决定是否-t-是-s-的重组词。你可以假设字符串只包含小写字母。" class="headerlink" title="给定两个字符串 s 和 t， 写一个函数来决定是否 t 是 s 的重组词。你可以假设字符串只包含小写字母。"></a>给定两个字符串 s 和 t， 写一个函数来决定是否 t 是 s 的重组词。你可以假设字符串只包含小写字母。</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">solution</span> </span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">boolean</span> <span class="title">isAnagram</span><span class="params">(String s, String t)</span> </span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(s.length()!=t.length())</span><br><span class="line">            <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        <span class="keyword">int</span> bit[] = <span class="keyword">new</span> <span class="keyword">int</span>[<span class="number">26</span>];</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">            bit[s.charAt(i)-<span class="string">'a'</span>]++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;s.length();i++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(--bit[t.charAt(i)-<span class="string">'a'</span>]&lt;<span class="number">0</span>)</span><br><span class="line">                <span class="keyword">return</span> <span class="keyword">false</span>;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">return</span> <span class="keyword">true</span>;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="String-s-new-String-“abc”-创建了几个-String-对象。"><a href="#String-s-new-String-“abc”-创建了几个-String-对象。" class="headerlink" title="String s=new String(“abc”);创建了几个 String 对象。"></a>String s=new String(“abc”);创建了几个 String 对象。</h2><p>两个或一个，”abc”对应一个对象，这个对象放在字符串常量缓冲区，常量”abc”不管出现多少遍，都是缓冲区中的那一个。New String 每写一遍，就创建一个新的对象，它一句那个常量”abc”对象的内容来<br>创建出一个新String 对象。如果以前就用过’abc’，这句代表就不会创建”abc”自己了，直接从缓冲区拿。</p>
+<h2 id="字符串如何转换为-int-类型"><a href="#字符串如何转换为-int-类型" class="headerlink" title="字符串如何转换为 int 类型"></a>字符串如何转换为 int 类型</h2><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Test</span> </span>&#123;</span><br><span class="line">	<span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//方式一</span></span><br><span class="line">	<span class="keyword">int</span> num=Integer.parseInt(<span class="string">"123"</span>);</span><br><span class="line">	<span class="comment">//方式二</span></span><br><span class="line">	<span class="keyword">int</span> num2=Integer.valueOf(<span class="string">"123"</span>);</span><br><span class="line">	System.out.println(num+<span class="string">" "</span>+num2);</span><br><span class="line">	&#125; </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="String-是最基本的数据类型吗"><a href="#String-是最基本的数据类型吗" class="headerlink" title="String 是最基本的数据类型吗?"></a>String 是最基本的数据类型吗?</h2><ul>
+<li>不是 。Java 中的基本数据类型只有 8 个：byte、short、int、long、float、double、char、boolean；除了基本类型（primitive type）和枚举类型（enumeration type），剩下的都是引用类型<br>（reference type）。</li>
+</ul>
+<h2 id="String-和-StringBuilder、StringBuffer-的区别"><a href="#String-和-StringBuilder、StringBuffer-的区别" class="headerlink" title="String 和 StringBuilder、StringBuffer 的区别?"></a>String 和 StringBuilder、StringBuffer 的区别?</h2><ul>
+<li>Java 平台提供了两种类型的字符串：String 和 StringBuffer / StringBuilder</li>
+</ul>
+<p>相同点：它们都可以储存和操作字符串，同时三者都使用 final 修饰，都属于终结类不能派生子类，操作的相关方法也类似例如获取字符串长度等；不同点：其中 String 是只读字符串，也就意味着<br>String 引用的字符串内容是不能被改变的，而 StringBuffer 和 StringBuilder 类表示的字符串对象可以直接进行修改，在修改的同时地址值不会发生改变。StringBuilder 是 JDK 1.5 中引入的，它和<br>StringBuffer 的方法完全相同，区别在于它是在单线程环境下使用的，因为它的所有方面都没有被 synchronized 修饰，因此它的效率也比 StringBuffer 略高。在此重点说明一下，String、StringBuffer、<br>StringBuilder 三者类型不一样，无法使用 equals()方法比较其字符串内容是否一样！</p>
+<ul>
+<li>补充 1：有一个面试题问：有没有哪种情况用+做字符串连接比调用StringBuffer / StringBuilder 对象的 append 方法性能更好？如果连接后得到的字符串在静态存储区中是早已存在的，那么用+做字符串连  接是优于<br>StringBuffer / StringBuilder 的 append 方法的。</li>
+<li>下面也是一个面试题，问程序的输出，看看自己能不能说出正确答案。</li>
+</ul>
+<h2 id="String-类为什么是-final-的"><a href="#String-类为什么是-final-的" class="headerlink" title="String 类为什么是 final 的"></a>String 类为什么是 final 的</h2><ol>
+<li>为了效率。若允许被继承，则其高度的被使用率可能会降低程序的性能。</li>
+<li>为了安全。JDK 中提供的好多核心类比如 String，这类的类的内部好多方法的实现都不是 java 编程语言本身编写的，好多方法都是调用的操作系统本地的 API，这就是著名的“本地方法调用”，也只有这样<br>才能做事，这种类是非常底层的，和操作系统交流频繁的，那么如果这种类可以被继承的话，如果我们再把它的方法重写了，往操作系统内部写入一段具有恶意攻击性质的代码什么的，这不就成了核心病毒了<br>么？不希望别人改，这个类就像一个工具一样，类的提供者给我们提供了， 就希望我们直接用就完了，不想让我们随便能改，其实说白了还是安全性，如果随便能改了，那么 java 编写的程序肯定就很不稳定<br>，你可以保证自己不乱改， 但是将来一个项目好多人来做，管不了别人，再说有时候万一疏忽了呢？他也不是估计的， 所以这个安全性是很重要的，java 和 C++相比，优点之一就包括这一点。</li>
+</ol>
+<h2 id="String-s-”Hello”-s-s-”world-”-执行后，是否是对前面-s指向空间内容的修改？"><a href="#String-s-”Hello”-s-s-”world-”-执行后，是否是对前面-s指向空间内容的修改？" class="headerlink" title="String s=”Hello”;s=s+”world!”;执行后，是否是对前面 s指向空间内容的修改？"></a>String s=”Hello”;s=s+”world!”;执行后，是否是对前面 s指向空间内容的修改？</h2><ul>
+<li><p>不是对前面 s 指向空间内容的直接修改。</p>
+</li>
+<li><p>因为 String 被设计成不可变(immutable)类，所以它的所有对象都是不可变对象。在这段代码中，s 原先指向一个 String 对象，内容是 “Hello”，然后我们对 s 进行了+操作，那么 s 所指向的那个对象<br>是否发生了改变呢？答案是没有。这时，s 不指向原来那个对象了，而指向了另一个 String 对象，内容为”Hello world!”，原来那个对象还存在于内存之中，只是 s 这个引用变量不再指向它了。</p>
+</li>
+</ul>
+<ul>
+<li>通过上面的说明，我们很容易导出另一个结论，如果经常对字符串进行各种各样的修改，或者说，不可预见的修改，那么使用 String 来代表字符串的话会引起很大的内存开销。因为 String 对象建立之后<br>不能再改变，所以对于每一个不同的字符串，都需要一个 String 对象来表示。这时，应该考虑使用StringBuffer 类，它允许修改，而不是每个不同的字符串都要生成一个新的对象。并且，这两种类的对象转换<br>十分容易。同时，我们还可以知道，如果要使用内容相同的字符串，不必每次都 new一个 String。例如我们要在构造器中对一个名叫 s 的 String 引用变量进行初始化，把它设置为初始值，应当这样做：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"></span><br><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Demo</span> </span>&#123;</span><br><span class="line">	<span class="keyword">private</span> String s;</span><br><span class="line">	...</span><br><span class="line">	<span class="keyword">public</span> Demo &#123; s = <span class="string">"Initial Value"</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	...</span><br><span class="line">	&#125;</span><br></pre></td></tr></table></figure>
+
+<p>而非</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">s = new String(<span class="string">"Initial Value"</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>后者每次都会调用构造器，生成新对象，性能低下且内存开销大，并且没有意义，因为 String 对象不可改变，所以对于内容相同的字符串，只要一个String 对象来表示就可以了。也就说，多次调用上面<br>的构造器创建多个对象，他们的 String 类型属性 s 都指向同一个对象。上面的结论还基于这样一个事实：对于字符串常量，如果内容相同，Java认为它们代表同一个 String 对象。而用关键字 new 调用<br>构造器，总是会创建一个新的对象，无论内容是否相同。至于为什么要把 String 类设计成不可变类，是它的用途决定的。其实不只String，很多 Java 标准类库中的类都是不可变的。在开发一个系统的时候，<br>我们有时候也需要设计不可变类，来传递一组相关的值，这也是面向对象思想的体现。不可变类有一些优点，比如因为它的对象是只读的，所以多线程并发访问也不会有任何问题。当然也有一些缺点，比如每<br>个不同的状态都要一个对象来代表，可能会造成性能上的问题。所以 Java 标准类库还提供了一个可变版本，即 StringBuffer。</li>
+</ul>
+<h2 id="下面这条语句一共创建了多少个对象：String-s-”a”-”b”-”c”-”d”"><a href="#下面这条语句一共创建了多少个对象：String-s-”a”-”b”-”c”-”d”" class="headerlink" title="下面这条语句一共创建了多少个对象：String s=”a”+”b”+”c”+”d”;"></a>下面这条语句一共创建了多少个对象：String s=”a”+”b”+”c”+”d”;</h2><ul>
+<li>对于如下代码：</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">String s1 = <span class="string">"a"</span>;</span><br><span class="line">String s2 = s1 + <span class="string">"b"</span>;</span><br><span class="line">String s3 = <span class="string">"a"</span> + <span class="string">"b"</span>;</span><br><span class="line">System.out.println(s2 == <span class="string">"ab"</span>);</span><br><span class="line">System.out.println(s3 == <span class="string">"ab"</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>第一条语句打印的结果为 false，第二条语句打印的结果为 true，这说明javac 编译可以对字符串常量直接相加的表达式进行优化，不必要等到运行期去进行加法运算处理，而是在编译时去掉其中的加号，<br>直接将其编译成一个这些常量相连的结果。题目中的第一行代码被编译器在编译时优化后，相当于直接定义一个”abcd”的字符串，所以，上面的代码应该只创建了一个 String 对象。</li>
+<li>写如下两行代码，</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">String s = <span class="string">"a"</span> + <span class="string">"b"</span> + <span class="string">"c"</span> + <span class="string">"d"</span>;</span><br><span class="line">System.out.println(s == <span class="string">"abcd"</span>);</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>最终打印的结果应该为 true。</li>
+</ul>
 
       
 
@@ -224,6 +291,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">String</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -274,7 +356,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://Ciaohi.github.io/2019/10/15/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://Ciaohi.github.io/2019/10/22/Java面试之String相关篇/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -288,15 +370,20 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/15/我的第一篇博客/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2019/10/22/Java面试题之集合篇/" id="article-nav-newer" class="article-nav-link-wrap">
       <i class="icon-circle-left"></i>
       <div class="article-nav-title">
         
-          hexo操作方法
+          Java面试题之集合篇
         
       </div>
     </a>
   
+  
+    <a href="/2019/10/19/Java-面试问题大全/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java 面试问题大全之Java基础篇</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

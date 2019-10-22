@@ -6,19 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://Ciaohi.github.io">
-  <title>Hello World | Ciaohi的博客</title>
+  <title>Java面试题之集合篇 | Ciaohi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+  <meta name="description" content="Java 集合体系结构（List、Set、Collection、Map 的区别和联系） Collection 接口存储一组不唯一，无序的对象 List 接口存储一组不唯一，有序（插入顺序）的对象 Set 接口存储一组唯一，无序的对象 Map 接口存储一组键值对象，提供 key 到 value 的映射。Key 无序，唯一。value 不要求有序，允许重复。（如果只使用 key 存储，而不使用valu">
+<meta name="keywords" content="Java,List">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Hello World">
-<meta property="og:url" content="https://Ciaohi.github.io/2019/10/15/hello-world/index.html">
+<meta property="og:title" content="Java面试题之集合篇">
+<meta property="og:url" content="https://Ciaohi.github.io/2019/10/22/Java面试题之集合篇/index.html">
 <meta property="og:site_name" content="Ciaohi的博客">
-<meta property="og:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta property="og:description" content="Java 集合体系结构（List、Set、Collection、Map 的区别和联系） Collection 接口存储一组不唯一，无序的对象 List 接口存储一组不唯一，有序（插入顺序）的对象 Set 接口存储一组唯一，无序的对象 Map 接口存储一组键值对象，提供 key 到 value 的映射。Key 无序，唯一。value 不要求有序，允许重复。（如果只使用 key 存储，而不使用valu">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-15T02:06:09.704Z">
+<meta property="og:updated_time" content="2019-10-22T14:30:59.825Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Hello World">
-<meta name="twitter:description" content="Welcome to Hexo! This is your very first post. Check documentation for more info. If you get any problems when using Hexo, you can find the answer in troubleshooting or you can ask me on GitHub. Quick">
+<meta name="twitter:title" content="Java面试题之集合篇">
+<meta name="twitter:description" content="Java 集合体系结构（List、Set、Collection、Map 的区别和联系） Collection 接口存储一组不唯一，无序的对象 List 接口存储一组不唯一，有序（插入顺序）的对象 Set 接口存储一组唯一，无序的对象 Map 接口存储一组键值对象，提供 key 到 value 的映射。Key 无序，唯一。value 不要求有序，允许重复。（如果只使用 key 存储，而不使用valu">
   
     <link rel="alternative" href="/atom.xml" title="Ciaohi的博客" type="application/atom+xml">
   
@@ -162,39 +163,142 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-hello-world" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Java面试题之集合篇" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      Hello World
+      Java面试题之集合篇
     </h1>
   
 
         
-        <a href="/2019/10/15/hello-world/" class="archive-article-date">
-  	<time datetime="2019-10-15T02:06:09.704Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-15</time>
+        <a href="/2019/10/22/Java面试题之集合篇/" class="archive-article-date">
+  	<time datetime="2019-10-22T07:08:23.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2019-10-22</time>
 </a>
         
       </header>
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <h2 id="Java-集合体系结构（List、Set、Collection、Map-的区别和联系）"><a href="#Java-集合体系结构（List、Set、Collection、Map-的区别和联系）" class="headerlink" title="Java 集合体系结构（List、Set、Collection、Map 的区别和联系）"></a>Java 集合体系结构（List、Set、Collection、Map 的区别和联系）</h2><ol>
+<li>Collection 接口存储一组不唯一，无序的对象</li>
+<li>List 接口存储一组不唯一，有序（插入顺序）的对象</li>
+<li>Set 接口存储一组唯一，无序的对象</li>
+<li>Map 接口存储一组键值对象，提供 key 到 value 的映射。Key 无序，唯一。value 不要求有序，允许重复。（如果只使用 key 存储，而不使用value，那就是 Set）</li>
+</ol>
+<h2 id="Vector-和-ArrayList-的区别和联系"><a href="#Vector-和-ArrayList-的区别和联系" class="headerlink" title="Vector 和 ArrayList 的区别和联系"></a>Vector 和 ArrayList 的区别和联系</h2><ul>
+<li>相同点：</li>
+</ul>
+<ol>
+<li>实现原理相同—底层都使用数组</li>
+<li>功能相同—实现增删改查等操作的方法相似</li>
+<li>都是长度可变的数组结构，很多情况下可以互用</li>
+</ol>
+<ul>
+<li>不同点：</li>
+</ul>
+<ol>
+<li>Vector 是早期 JDK 版本提供，ArrayList 是新版本替代 Vector 的</li>
+<li>Vector 线程安全，ArrayList 重速度轻安全，线程非安全长度需增长时，Vector 默认增长一倍，ArrayList 增长 50%</li>
+</ol>
+<h2 id="ArrayList-和-LinkedList-的区别和联系"><a href="#ArrayList-和-LinkedList-的区别和联系" class="headerlink" title="ArrayList 和 LinkedList 的区别和联系"></a>ArrayList 和 LinkedList 的区别和联系</h2><ul>
+<li>相同点：两者都实现了 List 接口，都具有 List 中元素有序、不唯一的特点。</li>
+<li>不同点：ArrayList 实现了长度可变的数组，在内存中分配连续空间。遍历元素和随机访问元素的效率比较高；<table>
+<thead>
+<tr>
+<th align="center">0</th>
+<th align="center">1</th>
+<th align="center">2</th>
+<th align="center">3</th>
+<th align="center">4</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">a</td>
+<td align="center">b</td>
+<td align="center">c</td>
+<td align="center">d</td>
+<td align="center">e</td>
+</tr>
+</tbody></table>
+</li>
+</ul>
+<h2 id="HashMap-和-Hashtable-的区别和联系"><a href="#HashMap-和-Hashtable-的区别和联系" class="headerlink" title="HashMap 和 Hashtable 的区别和联系"></a>HashMap 和 Hashtable 的区别和联系</h2><ul>
+<li>相同点：实现原理相同，功能相同，底层都是哈希表结构，查询速度快，在很多情况下可以互用</li>
+<li>不同点：</li>
+</ul>
+<ol>
+<li>Hashtable 是早期提供的接口，HashMap 是新版 JDK 提供的接口</li>
+<li>Hashtable 继承 Dictionary 类，HashMap 实现 Map 接口</li>
+<li>Hashtable 线程安全，HashMap 线程非安全</li>
+<li>Hashtable 不允许 null 值，HashMap 允许 null 值</li>
+</ol>
+<h2 id="HashSet-的使用和原理（hashCode-和-equals"><a href="#HashSet-的使用和原理（hashCode-和-equals" class="headerlink" title="HashSet 的使用和原理（hashCode()和 equals())"></a>HashSet 的使用和原理（hashCode()和 equals())</h2><ol>
+<li>哈希表的查询速度特别快，时间复杂度为 O（1）。</li>
+<li>HashMap、Hashtable、HashSet 这些集合采用的是哈希表结构，需要用到 hashCode 哈希码，hashCode 是一个整数值。</li>
+<li>系统类已经覆盖了 hashCode 方法 自定义类如果要放入 hash 类集合，必须重写 hashcode。如果不重写，调用的是 Object 的 hashcode，而Object 的 hashCode 实际上是地址。</li>
+<li>向哈希表中添加数据的原理：当向集合 Set 中增加对象时，首先集合计算要增加对象的 hashCode 码，根据该值来得到一个位置用来存放当前对象，如在该位置没有一个对象存在的话，那么集合 Set<br>认为该对象在集合中不存在，直接增加进去。如果在该位置有一个对象存在的话，接着将准备增加到集合中的对象与该位置上的对象进行 equals 方法比较，如果该 equals 方法返回 false,那么集合认为<br>集合中不存在该对象，在进行一次散列，将该对象放到散列后计算出的新地址里。如果 equals 方法返回 true，那么集合认为集合中已经存在该对象了，不会再将该对象增加到集合中了。</li>
+<li>在哈希表中判断两个元素是否重复要使用到 hashCode()和 equals()。hashCode决定数据在表中的存储位置，而equals判断是否存在相同数据。</li>
+<li>Y=K(X) ：K 是函数，X 是哈希码，Y 是地址</li>
+</ol>
+<h2 id="TreeSet-的原理和使用（Comparable-和-comparator）"><a href="#TreeSet-的原理和使用（Comparable-和-comparator）" class="headerlink" title="TreeSet 的原理和使用（Comparable 和 comparator）"></a>TreeSet 的原理和使用（Comparable 和 comparator）</h2><ol>
+<li>TreeSet 集合，元素不允许重复且有序(自然顺序)</li>
+<li>TreeSet 采用树结构存储数据，存入元素时需要和树中元素进行对比，需要指定比较策略。</li>
+<li>可以通过 Comparable(外部比较器)和 Comparator(内部比较器)来指定比较策略，实现了 Comparable 的系统类可以顺利存入 TreeSet。自定义类可以实现 Comparable 接口来指定比较策略。</li>
+<li>可创建 Comparator 接口实现类来指定比较策略，并通过 TreeSet 构造方法参数传入。这种方式尤其对系统类非常适用。</li>
+</ol>
+<h2 id="集合和数组的比较（为什么引入集合）"><a href="#集合和数组的比较（为什么引入集合）" class="headerlink" title="集合和数组的比较（为什么引入集合）"></a>集合和数组的比较（为什么引入集合）</h2><ul>
+<li>数组不是面向对象的，存在明显的缺陷，集合完全弥补了数组的一些缺点，比数组更灵活更实用，可大大提高软件的开发效率而且不同的集合框架类可适用于不同场合。具体如下：</li>
+</ul>
+<ol>
+<li>数组的效率高于集合类.</li>
+<li>数组能存放基本数据类型和对象，而集合类中只能放对象。</li>
+<li>数组容量固定且无法动态改变，集合类容量动态改变。</li>
+<li>数组无法判断其中实际存有多少元素，length 只告诉了 array 的容量。</li>
+<li>集合有多种实现方式和不同的适用场合，而不像数组仅采用顺序表方式。</li>
+<li>集合以类的形式存在，具有封装、继承、多态等类的特性，通过简单的方法和属性调用即可实现各种复杂操作，大大提高软件的开发效率。</li>
+</ol>
+<h2 id="Collection-和-Collections-的区别"><a href="#Collection-和-Collections-的区别" class="headerlink" title="Collection 和 Collections 的区别]"></a>Collection 和 Collections 的区别]</h2><ol>
+<li>Collection 是 Java 提供的集合接口，存储一组不唯一，无序的对象。它有两个子接口 List 和 Set。 </li>
+<li>Java 中还有一个 Collections 类，专门用来操作集合类 ，它提供一系列静态方法实现对各种集合的搜索、排序、线程安全化等操作。</li>
+</ol>
+<h2 id="Java-的-HashMap-和-Hashtable-有什么区别-HashSet-和HashMap-有什么区别？使用这些结构保存的数需要重载的方法是哪些？"><a href="#Java-的-HashMap-和-Hashtable-有什么区别-HashSet-和HashMap-有什么区别？使用这些结构保存的数需要重载的方法是哪些？" class="headerlink" title="Java 的 HashMap 和 Hashtable 有什么区别 HashSet 和HashMap 有什么区别？使用这些结构保存的数需要重载的方法是哪些？"></a>Java 的 HashMap 和 Hashtable 有什么区别 HashSet 和HashMap 有什么区别？使用这些结构保存的数需要重载的方法是哪些？</h2><ul>
+<li>HashMap 与 Hashtable 实现原理相同，功能相同，底层都是哈希表结构，查询速度快，在很多情况下可以互用</li>
+<li>两者的主要区别如下</li>
+</ul>
+<ol>
+<li>Hashtable 是早期 JDK 提供的接口，HashMap 是新版 JDK 提供的接口</li>
+<li>Hashtable 继承 Dictionary 类，HashMap 实现 Map 接口</li>
+<li>Hashtable 线程安全，HashMap 线程非安全</li>
+<li>Hashtable 不允许 null 值，HashMap 允许 null 值</li>
+</ol>
+<ul>
+<li>HashSet 与 HashMap 的区别</li>
+</ul>
+<ol>
+<li>HashSet底层是采用 HashMap 实现的。HashSet 的实现比较简单，HashSet 的绝大部分方法都是通过调用 HashMap 的方法来实现的，因此HashSet 和 HashMap 两个集合在实现本质上是相同的。</li>
+<li>HashMap 的 key 就是放进 HashSet 中对象，value 是 Object 类型的。</li>
+<li>当调用 HashSet 的 add 方法时，实际上是向 HashMap 中增加了一行(key-value 对)，该行的 key 就是向 HashSet 增加的那个对象，该行的value 就是一个 Object 类型的常量。</li>
+</ol>
+<h2 id="列出-Java-中的集合类层次结构？"><a href="#列出-Java-中的集合类层次结构？" class="headerlink" title="列出 Java 中的集合类层次结构？"></a>列出 Java 中的集合类层次结构？</h2><ul>
+<li>Java中集合主要分为两种：Collection 和 Map。Collection 是 List 和 Set 接口的父接口；ArrayList 和 LinkedList 是 List 的实现类；HashSet 和 TreeSet 是 Set 的实现类；LinkedHashSet是<br>HashSet 的子类。HashMap 和 TreeMap 是 Map 的实现类；LinkedHashMap 是 HashMap 的子类。</li>
+</ul>
+<h2 id="List，Set，Map-各有什么特点"><a href="#List，Set，Map-各有什么特点" class="headerlink" title="List，Set，Map 各有什么特点"></a>List，Set，Map 各有什么特点</h2><ul>
+<li>List 接口存储一组不唯一，有序（插入顺序）的对象。</li>
+<li>Set 接口存储一组唯一，无序的对象。</li>
+<li>Map 接口存储一组键值对象，提供 key 到 value 的映射。key 无序，唯一。value 不要求有序，允许重复。（如果只使用 key 存储，而不使用 value，那就是 Set）。</li>
+</ul>
+<h2 id="Map-的实现类中，哪些是有序的，哪些是无序的，有序的是如何保证其有序性，你觉得哪个有序性性能更高，你有没有更好或者更高效的实现方式？"><a href="#Map-的实现类中，哪些是有序的，哪些是无序的，有序的是如何保证其有序性，你觉得哪个有序性性能更高，你有没有更好或者更高效的实现方式？" class="headerlink" title="Map 的实现类中，哪些是有序的，哪些是无序的，有序的是如何保证其有序性，你觉得哪个有序性性能更高，你有没有更好或者更高效的实现方式？"></a>Map 的实现类中，哪些是有序的，哪些是无序的，有序的是如何保证其有序性，你觉得哪个有序性性能更高，你有没有更好或者更高效的实现方式？</h2><ol>
+<li>Map 的实现类有 HashMap,LinkedHashMap,TreeMap</li>
+<li>HashMap 是有无序的，LinkedHashMap 和 TreeMap 都是有序的（LinkedHashMap记录了添加数据的顺序；TreeMap默认是自然升序）</li>
+<li>LinkedHashMap 底层存储结构是哈希表+链表，链表记录了添加数据的顺序</li>
+<li>TreeMap 底层存储结构是二叉树，二叉树的中序遍历保证了数据的有序性</li>
+<li>LinkedHashMap 有序性能比较高，因为底层数据存储结构采用的哈希表</li>
+</ol>
+<h2 id="TreeMap-和-TreeSet-在排序时如何比较元素？Collections工具类中的-sort（）方法如何比较元素？"><a href="#TreeMap-和-TreeSet-在排序时如何比较元素？Collections工具类中的-sort（）方法如何比较元素？" class="headerlink" title="TreeMap 和 TreeSet 在排序时如何比较元素？Collections工具类中的 sort（）方法如何比较元素？"></a>TreeMap 和 TreeSet 在排序时如何比较元素？Collections工具类中的 sort（）方法如何比较元素？</h2><p>TreeSet 要求存放的对象所属的类必须实现 Comparable 接口，该接口提供了比较元素的 compareTo()方法，当插入元素时会 回调该方法比较元素的大小。TreeMap 要求存放的键值对映射的键必须实现<br>Comparable接口从而根据键对元素进行排序。Collections 工具类的 sort 方法有两种重载的形式，第一种要求传入的待排序容器中存放的对象比较实现Comparable 接口以实现元素的比较；第二种不强制<br>性的要求容器中的元素必须可比较，但是要求传入第二个参数，参数是 Comparator 接口的子类型（需要重写 compare 方法实现元素的比较），相当于一个临时定义的排序规则，其实就是是通过接口注入比<br>较元素大小的算法，也是对回调模式的应用。</p>
 
       
 
@@ -224,6 +328,21 @@
     <div class="article-info article-info-index">
       
       
+	<div class="article-tag tagcloud">
+		<i class="icon-price-tags icon"></i>
+		<ul class="article-tag-list">
+			 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Java</a>
+        		</li>
+      		 
+        		<li class="article-tag-list-item">
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">List</a>
+        		</li>
+      		
+		</ul>
+	</div>
+
       
 
       
@@ -274,7 +393,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=https://Ciaohi.github.io/2019/10/15/hello-world/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=https://Ciaohi.github.io/2019/10/22/Java面试题之集合篇/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -288,15 +407,11 @@
   
 <nav id="article-nav">
   
-    <a href="/2019/10/15/我的第一篇博客/" id="article-nav-newer" class="article-nav-link-wrap">
-      <i class="icon-circle-left"></i>
-      <div class="article-nav-title">
-        
-          hexo操作方法
-        
-      </div>
-    </a>
   
+    <a href="/2019/10/22/Java面试之String相关篇/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Java面试之String相关篇</div>
+      <i class="icon-circle-right"></i>
+    </a>
   
 </nav>
 

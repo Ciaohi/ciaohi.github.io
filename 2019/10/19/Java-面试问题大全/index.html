@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <link rel="dns-prefetch" href="https://Ciaohi.github.io">
-  <title>Java 面试问题大全 | Ciaohi的博客</title>
+  <title>Java 面试问题大全之Java基础篇 | Ciaohi的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="说明内存泄漏和内存溢出的区别和联系，结合项目经验描述Java 程序中如何检测？如何解决？ 内存溢出 out of memory，是指程序在申请内存时，没有足够的内存空间供其使用，出现 out of memory；比如申请了一个 integer,但给它存了long 才能存下的数，那就是内存溢出。   内存泄露 memory leak，是指程序在申请内存后，无法释放已申请的内存空间，一次内存泄露危害可">
 <meta name="keywords" content="Java,面试">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Java 面试问题大全">
+<meta property="og:title" content="Java 面试问题大全之Java基础篇">
 <meta property="og:url" content="https://Ciaohi.github.io/2019/10/19/Java-面试问题大全/index.html">
 <meta property="og:site_name" content="Ciaohi的博客">
 <meta property="og:description" content="说明内存泄漏和内存溢出的区别和联系，结合项目经验描述Java 程序中如何检测？如何解决？ 内存溢出 out of memory，是指程序在申请内存时，没有足够的内存空间供其使用，出现 out of memory；比如申请了一个 integer,但给它存了long 才能存下的数，那就是内存溢出。   内存泄露 memory leak，是指程序在申请内存后，无法释放已申请的内存空间，一次内存泄露危害可">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2019-10-20T10:43:52.686Z">
+<meta property="og:updated_time" content="2019-10-22T06:54:53.786Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Java 面试问题大全">
+<meta name="twitter:title" content="Java 面试问题大全之Java基础篇">
 <meta name="twitter:description" content="说明内存泄漏和内存溢出的区别和联系，结合项目经验描述Java 程序中如何检测？如何解决？ 内存溢出 out of memory，是指程序在申请内存时，没有足够的内存空间供其使用，出现 out of memory；比如申请了一个 integer,但给它存了long 才能存下的数，那就是内存溢出。   内存泄露 memory leak，是指程序在申请内存后，无法释放已申请的内存空间，一次内存泄露危害可">
   
     <link rel="alternative" href="/atom.xml" title="Ciaohi的博客" type="application/atom+xml">
@@ -170,7 +170,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Java 面试问题大全
+      Java 面试问题大全之Java基础篇
     </h1>
   
 
@@ -337,6 +337,322 @@
 <li>别名不同。成员变量也称为实例变量。静态变量称为类变量。</li>
 <li>数据存储位置不同。成员变量数据存储在堆内存的对象中，所以也叫对象的特有数据.静态变量数据存储在方法区(共享数据区)的静态区，所以也叫对象的共享数据.</li>
 </ol>
+<h2 id="如果变量用-final-修饰，则怎样？如果方法-final-修饰，则怎样"><a href="#如果变量用-final-修饰，则怎样？如果方法-final-修饰，则怎样" class="headerlink" title="如果变量用 final 修饰，则怎样？如果方法 final 修饰，则怎样?"></a>如果变量用 final 修饰，则怎样？如果方法 final 修饰，则怎样?</h2><ul>
+<li>用 final 修饰的类不能被扩展，也就是说不可能有子类；</li>
+<li>用 final 修饰的方法不能被替换或隐藏：</li>
+</ul>
+<ol>
+<li>使用 final 修饰的实例方法在其所属类的子类中不能被替换（overridden）</li>
+<li>使用 final 修饰的静态方法在其所属类的子类中不能被重定义（redefined）而隐藏 （hidden）；</li>
+<li>用 final 修饰的变量最多只能赋值一次，在赋值方式上不同类型的变量或稍有不同：</li>
+</ol>
+<ul>
+<li>静态变量必须明确赋值一次（不能只使用类型缺省值）；作为类成员的静态变量，赋值可以在其声明中通过初始化表达式完成，也可以在静态初始化块中进行；作为接口成员的静态变量，赋值只能在其声<br>明中通过初始化表达式完成；</li>
+<li>实例变量同样必须明确赋值一次（不能只使用类型缺省值）；赋值可以在其声明中通过初始化表达式完成，也可以在实例初始化块或构造器中进行；</li>
+<li>方法参数变量在方法被调用时创建，同时被初始化为对应实参值，终止于方法体 （body）结束，在此期间其值不能改变；</li>
+<li>构造器参数变量在构造器被调用（通过实例创建表达式或显示的构造器调用）时创建，同时被初始化，为对应实参值，终止于构造器体结束，在此期间其值不能改变；</li>
+<li>异常处理器参数变量在有异常被 try 语句的 catch 子句捕捉到时创建，同时被初始化为实际的异常对象，终止于 catch 语句块结束，在此期间其值不能改变；</li>
+<li>局部变量在其值被访问之前必须被明确赋值；</li>
+</ul>
+<h2 id="int-和-Integer-有什么区别"><a href="#int-和-Integer-有什么区别" class="headerlink" title="int 和 Integer 有什么区别?"></a>int 和 Integer 有什么区别?</h2><ul>
+<li><p>Java 是一个近乎纯洁的面向对象编程语言，但是为了编程的方便还是引入不是对象的基本数据类型，但是为了能够将这些基本数据类型当成对象操作，Java 为每一个基本数据类型都引入了对应的包装类型<br>（wrapper class），int 的包装类就是 Integer，从 JDK 1.5 开始引入了自动装箱/拆箱机制，使得二者可以相互转换。Java 为每个原始类型提供了包装类型：原始类型: boolean，char，byte，short，<br>int，long，float，double.包装类型：Boolean，Character，Byte，Short，Integer，Long，Float，Double.</p>
+</li>
+<li><p>如果不明就里很容易认为两个输出要么都是 true 要么都是 false。首先需要注意的是 f1、f2、f3、f4 四个变量都是 Integer 对象，所以下面的==运算比较的不是值而是引用。装箱的本质是什么呢？当我们<br>给一个 Integer 对象赋一个 int 值的时候，会调用 Integer 类的静态方法 valueOf，如果看看valueOf 的源代码就知道发生了什么。简单的说，如果字面量的值在-128 到 127 之间，那么不会 new 新的 Integer<br>对象，而是直接引用常量池中的 Integer 对象，所以上面的面试题中 f1==f2的结果是 true，而 f3==f4 的结果是 false。越是貌似简单的面试题其中的玄机就越多，需要面试者有相当深厚的功力。</p>
+</li>
+</ul>
+<h2 id="amp-和-amp-amp-的区别？"><a href="#amp-和-amp-amp-的区别？" class="headerlink" title="&amp;和&amp;&amp;的区别？"></a>&amp;和&amp;&amp;的区别？</h2><p>&amp;运算符有两种用法：(1)按位与；(2)逻辑与。&amp;&amp;运算符是短路与运算。逻辑与跟短路与的差别是非常巨大的，虽然二者都要求运算符左右两端的布尔值都是 true 整个表达式的值才是 true。&amp;&amp;之所以称为短路<br>运算是因为，如果&amp;&amp;左边的表达式的值是 false，右边的表达式会被直接短路掉，不会进行运算。很多时候我们可能都需要用&amp;&amp;而不是&amp;，例如在验证用户登录时判定用户名不是 null 而且不是空字符串，应当写<br>为：username != null &amp;&amp;!username.equals(“”)，二者的顺序不能交换，更不能用&amp;运算符，因为第一个条件如果不成立，根本不能进行字符串的 equals 比较，否则会产生 NullPointerException 异常。注意：<br>逻辑或运算符（|）和短路或运算符（||）的差别也是如此。补充：如果你熟悉 JavaScript，那你可能更能感受到短路运算的强大，想成为 JavaScript 的高手就先从玩转短路运算开始吧。</p>
+<h2 id="Math-round-11-5-等于多少-Math-round-11-5-等于多少"><a href="#Math-round-11-5-等于多少-Math-round-11-5-等于多少" class="headerlink" title="Math.round(11.5) 等于多少? Math.round(-11.5)等于多少?"></a>Math.round(11.5) 等于多少? Math.round(-11.5)等于多少?</h2><p>Math.round(11.5)的返回值是 12，Math.round(-11.5)的返回值是-11。四舍五入的原理是在参数上加 0.5 然后进行下取整。</p>
+<h2 id="简述-Java-的垃圾回收机制"><a href="#简述-Java-的垃圾回收机制" class="headerlink" title="简述 Java 的垃圾回收机制"></a>简述 Java 的垃圾回收机制</h2><p>传统的 C/C++语言，需要程序员负责回收已经分配内存。显式回收垃圾回收的缺点：</p>
+<ol>
+<li>程序忘记及时回收，从而导致内存泄露，降低系统性能。</li>
+<li>序错误回收程序核心类库的内存，导致系统崩溃。</li>
+</ol>
+<ul>
+<li>Java语言不需要程序员直接控制内存回收，是由 JRE 在后台自动回收不再使用的内存，称为垃圾回收机制，简称 GC；</li>
+</ul>
+<ol>
+<li>可以提高编程效率。</li>
+<li>保护程序的完整性。</li>
+<li>其开销影响性能。Java 虚拟机必须跟踪程序中有用的对象，确定哪些是无用的。<br>垃圾回收机制的特点</li>
+<li>垃圾回收机制回收 JVM 堆内存里的对象空间,不负责回收栈内存数据。</li>
+<li>对其他物理连接，比如数据库连接、输入流输出流、Socket 连接无能为力。</li>
+<li>垃圾回收发生具有不可预知性，程序无法精确控制垃圾回收机制执行。</li>
+<li>可以将对象的引用变量设置为 null，暗示垃圾回收机制可以回收该对象。<br>现在的 JVM 有多种垃圾回收实现算法，表现各异。垃圾回收机制回收任何对象之前，总会先调用它的 finalize 方法（如果覆盖该方法，让一个新的引用变量重新引用该对象，则会重新激活对象）。程序员<br>可以通过 System.gc()或者 Runtime.getRuntime().gc()来通知系统进行垃圾回收，会有一些效果，但是系统是否进行垃圾回收依然不确定。永远不要主动调用某个对象的 finalize 方法，应该交给垃圾回<br>收机制调用。</li>
+</ol>
+<h2 id="为什么为基本类型引入包装类"><a href="#为什么为基本类型引入包装类" class="headerlink" title="为什么为基本类型引入包装类"></a>为什么为基本类型引入包装类</h2><ol>
+<li>基本数据类型有方便之处，简单、高效。</li>
+<li>但是 Java 中的基本数据类型却是不面向对象的（没有属性、方法），这在实际使用时存在很多的不便（比如集合的元素只能是 Object）。为了解决这个不足，在设计类时为每个基本数据类型设计了一个<br>对应的类进行包装，这样八个和基本数据类型对应的类统称为包装类(Wrapper Class)。</li>
+<li>包装类和基本数据类型之间的转换</li>
+</ol>
+<ul>
+<li>包装类—— wrapperInstance.xxxValue() ——&gt;基本数据类型</li>
+<li>包装类——-new WrapperClass(primitive) new WrapperClass(string)——基本数据类型</li>
+</ul>
+<ol start="4">
+<li>自动装箱和自动拆箱<br>JDK1.5 提供了自动装箱（autoboxing）和自动拆箱（autounboxing）功能, 从而实现了包装类和基本数据类型之间的自动转换<br>5) 包装类还可以实现基本类型变量和字符串之间的转换</li>
+</ol>
+<ul>
+<li>基本类型变量————String.valueof()————&gt;字符串</li>
+<li>基本类型变量————WrapperClass.parseXxx(string)————&gt;字符串</li>
+</ul>
+<h2 id="java-sql-Date-和-java-util-Date-的联系和区别"><a href="#java-sql-Date-和-java-util-Date-的联系和区别" class="headerlink" title="java.sql.Date 和 java.util.Date 的联系和区别"></a>java.sql.Date 和 java.util.Date 的联系和区别</h2><ol>
+<li>java.sql.Date 是 java.util.Date 的子类，是一个包装了毫秒值的瘦包装器，允许 JDBC 将毫秒值标识为 SQL DATE 值。毫秒值表示自 1970 年 1 月 1 日 00:00:00 GMT 以来经过的毫秒数。 为了与<br>SQL DATE 的定义一致，由 java.sql.Date 实例包装的毫秒值必须通过将时间、分钟、秒和毫秒设置为与该实例相关的特定时区中的零来“规范化”。 说白了，java.sql.Date 就是与数据库 Date 相对应的一<br>个类型，而 java.util.Date 是纯java的 Date。</li>
+<li>JAVA 里提供的日期和时间类，java.sql.Date 和 java.sql.Time,只会从数据库里读取某部分值，这有时会导致丢失数据。例如一个包含 2002/05/22 5:00:57 PM 的字段，读取日期时得到的是 2002/05/22,<br>而读取时间时得到的是 5:00:57 PM. 你需要了解数据库里存储时间的精度。有些数据库，比如MySQL,精度为毫秒，然而另一些数据库，包括 Oracle,存储 SQL DATE 类型数据时，毫秒部分的数据是不保存的。<br>以下操作中容易出现不易被发现的BUG：获得一个 JAVA 里的日期对象。 从数据库里读取日期 试图比较两个日期对象是否相等。如果毫秒部分丢失，本来认为相等的两个日期对象用Equals 方法可能返回 false。<br>.sql.Timestamp 类比 java.util.Date 类精确度要高。这个类包了一个 getTime()方法，但是它不会返回额外精度部分的数据，因此必须使用…总之，java.util.Date 就是 Java 的日期对象，而 java.sql.Date<br>是针对 SQL句使用的，只包含日期而没有时间部分。</li>
+</ol>
+<h2 id="面向对象的特征有哪些方面？请用生活中的例子来描述。"><a href="#面向对象的特征有哪些方面？请用生活中的例子来描述。" class="headerlink" title="面向对象的特征有哪些方面？请用生活中的例子来描述。"></a>面向对象的特征有哪些方面？请用生活中的例子来描述。</h2><ul>
+<li><p>面向对象的三大特征：封装、继承、多态。举例：（比如设计一个游戏）我现在创建了一个对象，名叫战士。  战士的属性是—性别，年龄，职业，等级，战斗力，血量。  它的方法—战斗，逃跑，吃饭，<br>睡觉，死。  后来，我又建了一个对象，叫人。属性:性别，年龄，职业，等级，血量.方法:逃跑，吃饭，睡觉，死。我让人，成为战士的父类，战士可以直接继承人的属性和方法。战士修改成—属性:战斗力。<br>方法:战斗。看上去战士的资料变少了，实际上没有，我们仍然可以调用方法—战士.死。而且我们还可以重载战士.死的方法，简称重载死法。我还建了一个对象—法师，父类也是人。属性:法力值方法:施法，泡<br>妞。你看，用了继承，创建对象变得更方便了。再后来，我又建立了一个对象，叫怪物。属性:等级，战力，血量。方法:战斗，死。建了个对象，叫白兔怪，父类怪物，可继承怪物所有的属性和方法。属性:<br>毛色。方法:卖萌，吃胡萝卜。</p>
+</li>
+<li><p>封装：通常认为封装是把数据和操作数据的方法绑定起来，对数据的访问只能通过已定义的接口。面向对象的本质就是将现实世界描绘成一系列完全自治、封闭的对象。我们在类中编写的方法就是对实现<br>细节的一种封装；我们编写一个类就是对数据和数据操作的封装。可以说，封装就是隐藏一切可隐藏的东西，只向外界提供最简单的编程接口（可以想想普通洗衣机和全自动洗衣机的差别，明显全自动洗衣<br>机封装更好因此操作起来更简单；我们现在使用的智能手机也是封装得足够好的，因为几个按键就搞定了所有的事情）。</p>
+</li>
+<li><p>多态性：多态性是指允许不同子类型的对象对同一消息作出不同的响应。简单的说就是用同样的对象引用调用同样的方法但是做了不同的事情。多态性分为编译时的多态性和运行时的多态性。如果将对象的<br>方法视为对象向外界提供的服务，那么运行时的多态性可以解释为：当 A 系统访问 B 系统提供的服务时，B 系统有多种提供服务的方式，但一切对 A 系统来说都是透明的（就像电动剃须刀是 A 系统，它的<br>供电系统是 B 系统，B 系统可以使用电池供电或者用交流电，甚至还有可能是太阳能，A 系统只会通过 B 类对象调用供电的方法，但并不知道供电系统的底层实现是什么，究竟通过何种方式获得了动力）。<br>方法重载（overload）实现的是编译时的多态性（也称为前绑定），而方法重写（override）实现的是运行时的多态性（也称为后绑定）。运行时的多态是面向对象最精髓的东西，要实现多态需要做两件事：  </p>
+</li>
+</ul>
+<ol>
+<li>方法重写（子类继承父类并重写父类中已有的或抽象的方法）；</li>
+<li>对象造型（用父类型引用引用子类型对象，这样同样的引用调用同样的方法就会根据子类对象的不同而表现出不同的行为）。</li>
+</ol>
+<h2 id="Java-中-Math-random（）-Math-random（）值为？"><a href="#Java-中-Math-random（）-Math-random（）值为？" class="headerlink" title="Java 中 Math.random（）/Math.random（）值为？"></a>Java 中 Math.random（）/Math.random（）值为？</h2><p>如果除数与被除数均不为 0.0 的话，则取值范围为[0, +∞]。+∞在 Java 中显示的结果为 Infinity。如果除数与被除数均为 0.0 的话，则运行结果为 NaN（Not a Number 的简写），计算错误。</p>
+<h2 id="Java-中，如果-Manager-是-Employee-的子类，那么Pair是-Pair的子类吗？"><a href="#Java-中，如果-Manager-是-Employee-的子类，那么Pair是-Pair的子类吗？" class="headerlink" title="Java 中，如果 Manager 是 Employee 的子类，那么Pair是 Pair的子类吗？"></a>Java 中，如果 Manager 是 Employee 的子类，那么Pair<manager>是 Pair<employee>的子类吗？</employee></manager></h2><p>不是，两者没有任何关联；Pair 是单独的类，只不过用不同类型的参数（泛型）进行了相应的实例化而已；所以，Pair<manager>和 Pair<employee>不是子类的关系。</employee></manager></p>
+<h2 id="解释继承、重载、覆盖。"><a href="#解释继承、重载、覆盖。" class="headerlink" title="解释继承、重载、覆盖。"></a>解释继承、重载、覆盖。</h2><ul>
+<li>继承（英语：inheritance）是面向对象软件技术当中的一个概念。如果一个类别 A“继承自”另一个类别 B，就把这个 A 称为“B 的子类别”，而把 B称为“A 的父类别”也可以称“B 是 A 的超类”。继承可以<br>使得子类别具有父类别的各种属性和方法，而不需要再次编写相同的代码。在令子类别继承父类别的同时，可以重新定义某些属性，并重写某些方法，即覆盖父类别的原有属性和方法，使其获得与父类别不<br>同的功能。另外，为子类别追加新的属性和方法也是常见的做法。 一般静态的面向对象编程语言，继承属于静态的，意即在子类别的行为在编译期就已经决定，无法在执行期扩充。那么如何使用继承呢？<br>用 extends 关键字来继承父类。如上面 A 类与 B 类，当写继承语句时， class A 类 extends B 类{ } 其中 A类是子类，B 类是父类。</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">英文</th>
+<th align="left">位置不同</th>
+<th align="left">作用不同</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">重载</td>
+<td align="center">overload</td>
+<td align="left">同一个类中</td>
+<td align="left">在一个类里面为一种行为提供多种实现方式并提高可读性</td>
+</tr>
+<tr>
+<td align="center">重写</td>
+<td align="center">override</td>
+<td align="left">子类和父类间</td>
+<td align="left">父类方法无法满足子类的要求，子类通过方法重写满足要求</td>
+</tr>
+</tbody></table>
+<table>
+<thead>
+<tr>
+<th align="center"></th>
+<th align="center">修饰符</th>
+<th align="left">返回值</th>
+<th align="center">方法名</th>
+<th align="center">参数</th>
+<th align="center">抛出异常</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">重载</td>
+<td align="center">无关</td>
+<td align="left">无关</td>
+<td align="center">相同</td>
+<td align="center">不同</td>
+<td align="center">无关</td>
+</tr>
+<tr>
+<td align="center">重写</td>
+<td align="center">大于等于</td>
+<td align="left">小于等于</td>
+<td align="center">相同</td>
+<td align="center">相同</td>
+<td align="center">小于等于</td>
+</tr>
+</tbody></table>
+<ul>
+<li>重载和重写都是实现多态的方式，区别在于前者实现的是编译时的多态性，而后者实现的是运行时的多态性。重载（overload）发生在同一个类中，相同的方法，如果有不同的参数列表（参数类型不同、参<br>数个数不同或者二者都不同）则视为重载；重写（override）发生在子类与父类之间也就是继承机制当中，当父类的方法不能满足子类的要求，此时子类重写父类的方法；要求：方法名、形参列表相同；返回<br>值类型和异常类型，子类小于等于父类；访问权限，子类大于等于父类，切记父类的私有方法以及被 final 修饰的方法不能被子类重写；重载对返回类型没有特殊的要求。</li>
+</ul>
+<h2 id="Java-中-byte-表示的数值范围是什么？"><a href="#Java-中-byte-表示的数值范围是什么？" class="headerlink" title="Java 中 byte 表示的数值范围是什么？"></a>Java 中 byte 表示的数值范围是什么？</h2><p>范围是-128 至 127</p>
+<h2 id="Java-中-int-long-占用的字节数分别是"><a href="#Java-中-int-long-占用的字节数分别是" class="headerlink" title="Java 中 int.long 占用的字节数分别是"></a>Java 中 int.long 占用的字节数分别是</h2><ol>
+<li>“字节”是 byte，“位”是 bit ； </li>
+<li>1 byte = 8 bit ；char 在 Java 中是 2 个字节。java 采用 unicode，2 个字节（16 位）来表示一个字符。short 2 个字节,int 4 个字节,long 8 个字节.</li>
+</ol>
+<h2 id="成员变量用-static-修饰和不用-static-修饰有什么区别-1"><a href="#成员变量用-static-修饰和不用-static-修饰有什么区别-1" class="headerlink" title="成员变量用 static 修饰和不用 static 修饰有什么区别"></a>成员变量用 static 修饰和不用 static 修饰有什么区别</h2><ol>
+<li>两个变量的生命周期不同。成员变量随着对象的创建而存在，随着对象的被回收而释放。静态变量随着类的加载而存在，随着类的消失而消失。</li>
+<li>调用方式不同。成员变量只能被对象调用。静态变量可以被对象调用，还可以被类名调用。对象调用：p.country类名调用 ：Person.country</li>
+<li>别名不同。成员变量也称为实例变量。静态变量称为类变量。</li>
+<li>数据存储位置不同。成员变量数据存储在堆内存的对象中，所以也叫对象的特有数据.静态变量数据存储在方法区(共享数据区)的静态区，所以也叫对象的共享数据.</li>
+</ol>
+<h2 id="两个对象值相同-x-equals-y-true-，但却可有不同的hash-code，这句话对不对？"><a href="#两个对象值相同-x-equals-y-true-，但却可有不同的hash-code，这句话对不对？" class="headerlink" title="两个对象值相同(x.equals(y) == true)，但却可有不同的hash code，这句话对不对？"></a>两个对象值相同(x.equals(y) == true)，但却可有不同的hash code，这句话对不对？</h2><ul>
+<li><p>不对，如果两个对象 x 和 y 满足 x.equals(y) == true，它们的哈希码（hash code）应当相同。Java 对于 eqauls 方法和 hashCode 方法是这样规定的：(1)如果两个对象相同（equals 方法返回 true）<br>，那么它们的hashCode 值一定要相同；(2)如果两个对象的 hashCode 相同，它们并不一定相同。当然，你未必要按照要求去做，但是如果你违背了上述原则就会发现在使用容器时，相同的对象可以出现在<br>Set 集合中，同时增加新元素的效率会大大下降（对于使用哈希存储的系统，如果哈希码频繁的冲突将会造成存取性能急剧下降）。</p>
+</li>
+<li><p>补充：关于 equals 和 hashCode 方法，很多 Java 程序都知道，但很多人也就是仅仅知道而已，在 Joshua Bloch 的大作《Effective Java》（很多软件公司，《Effective Java》、《Java 编程思想》<br>以及《重构：改善既有代码质量》是 Java 程序员必看书籍，如果你还没看过，那就赶紧去亚马逊买一本吧）中是这样介绍 equals 方法的：首先 equals 方法必须满足自反性（x.equals(x)必须返回 true）<br>、对称性（x.equals(y)返回 true 时，y.equals(x)也必须返回 true）、传递性（x.equals(y)和 y.equals(z)都返回 true 时，x.equals(z)也必须返回 true）和一致性（当 x 和 y 引用的对象信息没有<br>被修改时，多次调用 x.equals(y)应该得到同样的返回值），而且对于任何非 null值的引用 x，x.equals(null)必须返回 false。实现高质量的 equals 方法的诀窍包括：1. 使用==操作符检查“参数是否为<br>这个对象的引用”；2. 使用instanceof 操作符检查“参数是否为正确的类型”；3. 对于类中的关键属性，检查参数传入对象的属性是否与之相匹配；4. 编写完 equals 方法后，问自己它是否满足对称性、<br>传递性、一致性；5. 重写 equals 时总是要重写hashCode；6. 不要将 equals 方法参数中的 Object 对象替换为其他的类型，在重写时不要忘掉@Override 注解。</p>
+</li>
+</ul>
+<h2 id="当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递"><a href="#当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递" class="headerlink" title="当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递?"></a>当一个对象被当作参数传递到一个方法后，此方法可改变这个对象的属性，并可返回变化后的结果，那么这里到底是值传递还是引用传递?</h2><ul>
+<li>是值传递。Java 编程语言只有值传递参数。当一个对象实例作为一个参数被传递到方法中时，参数的值就是对该对象的引用。对象的属性可以在被调用过程中被改变，但对象的引用是永远不会改变的。    </li>
+<li>C++和 C#中可以通过传引用或传输出参数来改变传入的参数的值。补充：Java 中没有传引用实在是非常的不方便，这一点在 Java 8 中仍然没有得到改进，正是如此在Java 编写的代码中  才会出现大<br>量的Wrapper类（将需要通过方法调用修改的引用置于一个 Wrapper 类中，再将 Wrapper 对象传入方法），这样的做法只会让代码变得臃肿，尤其是让从 C 和 C++转型为 Java 程序员的开发者无法容忍。</li>
+</ul>
+<h2 id="静态嵌套类-Static-Nested-Class-和内部类（Inner-Class）"><a href="#静态嵌套类-Static-Nested-Class-和内部类（Inner-Class）" class="headerlink" title="静态嵌套类(Static Nested Class)和内部类（Inner Class）"></a>静态嵌套类(Static Nested Class)和内部类（Inner Class）</h2><ul>
+<li><p>内部类就是在一个类的内部定义的类，内部类中不能定义静态成员（静态成员不是对象的特性，只是为了找一个容身之处，所以需要放到一个类中而已，这么一点小事，你还要把它放到类内部的一个类中，<br>过分了啊！提供内部类，不是为让你干这种事情，无聊，不让你干。我想可能是既然静态成员类似 c 语言的全局变量，而内部类通常是用于创建内部对象用的，所以，把“全局变量”放在内部类中就是毫无意<br>义的事情，既然是毫无意义的事情，就应该被禁止），内部类可以直接访问外部类中的成员变量，内部类可以定义在外部类的方法外面，也可以定义在外部类的方法体中。</p>
+</li>
+<li><p>在方法体外面定义的内部类的访问类型可以是 public,protect,默认的，private 等 4 种类型，这就好像类中定义的成员变量有 4 种访问类型一样，它们决定这个内部类的定义对其他类是否可见；对于这<br>种情况，我们也可以在外面创建内部类的实例对象，创建内部类的实例对象时，一定要先创建外部类的实例对象，然后用这个外部类的实例对象去创建内部类的实例对象，代码如下：Outer outer = new Outer();<br>uter.Inner1 inner1 = outer.new Innner1();在方法内部定义的内部类前面不能有访问类型修饰符，就好像方法中定义的局部变量一样，但这种内部类的前面可以使用 final 或 abstract 修饰符。这种内部类<br>对其他类是不可见的其他类无法引用这种内部类，但是这种内部类创建的实例对象可以传递给其他类访问。这种内部类必须是先定义，后使用，即内部类的定义代码必须出现在使用该类之前，这与方法中的局部<br>变量必须先定义后使用的道理也是一样的。这种内部类可以访问方法体中的局部变量，但是，该局部变量前必须加 final 修饰符。对于这些细节，只要在 eclipse 写代码试试，根据开发工具提示的各类错误<br>信息就可以马上了解到。</p>
+</li>
+<li><p>在方法体内部还可以采用如下语法来创建一种匿名内部类，即定义某一接口或类的子类的同时，还创建了该子类的实例对象，无需为该子类定义名称：最后，在方法外部定义的内部类前面可以加上 static 关键字，<br>从而成为 Static Nested Class，它不再具有内部类的特性，所有，从狭义上讲，它不是内部类。Static Nested Class 与普通类在运行时的行为和功能上没有什么区别，只是在编程引用时的语法上有一些差别，它<br>可以定义成 public、protected、默认的、private 等多种类型，而普通类只能定义成 public 和默认的这两种类型。在外面引用 Static Nested Class 类的名称为“外部类名.内部类名”。在外面不需要创建外部类的<br>实例对象，就可以直接创建 Static Nested Class。</p>
+</li>
+<li><p>例如，假设 Inner 是定义在 Outer 类中的 Static Nested Class，那么可以使用如下语句创建 Inner 类：Outer.Inner inner = newOuter.Inner();由于 static Nested Class 不依赖于外部类的实例对象，<br>所以，static Nested Class 能访问外部类的非 static 成员变量(不能直接访问，需要创建外部类实例才能访问非静态变量)。当在外部类中访问 Static Nested Class 时，可以直接使用 Static Nested Class<br>的名字，而不需要加上外部类的名字了，在Static Nested Class 中也可以直接引用外部类的 static 的成员变量，不需要加上外部类的名字。在静态方法中定义的内部类也是 Static Nested Class，这时候不能在<br>类前面加 static 关键字，静态方法中的 Static Nested Class 与普通方法中的内部类的应用方式很相似，它除了可以直接访问外部类中的 static 的成员变量，还可以访问静态方法中的局部变量，但是，该局部<br>变量前必须加 final 修饰符。</p>
+</li>
+<li><p>备注：首先根据你的印象说出你对内部类的总体方面的特点：例如，在两个地方可以定义，可以访问外部类的成员变量，不能定义静态成员，这是大的特点。然后再说一些细节方面的知识，例如，几种定义方式的<br>语法区别，静态内部类，以及匿名内部类。Static Nested Class 是被声明为静态（static）的内部类，它可以不依赖于外部类实例被实例化。而通常的内部类需要在外部类实例化后才能实例化，<br>其语法看起来挺诡异的，如下所示。</p>
+</li>
+</ul>
+<h2 id="抽象的（abstract）方法是否可同时是静态的（static）-是否可同时是本地方法（native），是否可同时被-synchronized-修饰"><a href="#抽象的（abstract）方法是否可同时是静态的（static）-是否可同时是本地方法（native），是否可同时被-synchronized-修饰" class="headerlink" title="抽象的（abstract）方法是否可同时是静态的（static）,是否可同时是本地方法（native），是否可同时被 synchronized 修饰?"></a>抽象的（abstract）方法是否可同时是静态的（static）,是否可同时是本地方法（native），是否可同时被 synchronized 修饰?</h2><ul>
+<li>都不能。抽象方法需要子类重写，而静态的方法是无法被重写的，因此二者是矛盾的。本地方法是由本地代码（如 C 代码）实现的方法，而抽象方法是没有实现的，也是矛盾的。synchronized 和方法的<br>实现细节有关，抽象方法不涉及实现细节，因此也是相互矛盾的。</li>
+</ul>
+<h2 id="静态变量和实例变量的区别？"><a href="#静态变量和实例变量的区别？" class="headerlink" title="静态变量和实例变量的区别？"></a>静态变量和实例变量的区别？</h2><ul>
+<li>静态变量是被 static 修饰符修饰的变量，也称为类变量，它属于类，不属于类的任何一个对象，一个类不管创建多少个对象，静态变量在内存中有且仅有一个拷贝；实例变量必须依存于某一实例，需要先<br>创建对象然后通过对象才能访问到它，静态变量可以实现让多个对象共享内存。两者的相同点：都有默认值而且在类的任何地方都可以调用。在 Java 开发中，上下文类和工具类中通常会有大量的静态成员。</li>
+</ul>
+<h2 id="是否可以从一个静态（static）方法内部发出对非静态（non-static）方法的调用？"><a href="#是否可以从一个静态（static）方法内部发出对非静态（non-static）方法的调用？" class="headerlink" title="是否可以从一个静态（static）方法内部发出对非静态（non-static）方法的调用？"></a>是否可以从一个静态（static）方法内部发出对非静态（non-static）方法的调用？</h2><ul>
+<li>不可以，静态方法只能访问静态成员，因为非静态方法的调用要先创建对象，因此在调用静态方法时可能对象并没有被初始化。</li>
+</ul>
+<h2 id="如何实现对象克隆？"><a href="#如何实现对象克隆？" class="headerlink" title="如何实现对象克隆？"></a>如何实现对象克隆？</h2><ol>
+<li>实现 Cloneable 接口并重写 Object 类中的 clone()方法；</li>
+<li>实现 Serializable 接口，通过对象的序列化和反序列化实现克隆，可以实现真正的深度克隆</li>
+</ol>
+<ul>
+<li>注意：基于序列化和反序列化实现的克隆不仅仅是深度克隆，更重要的是通过泛型限定，可以检查出要克隆的对象是否支持序列化，这项检查是编译器完成的，不是在运行时抛出异常，这种是方案明显优于<br>使用 Object 类的clone 方法克隆对象。</li>
+</ul>
+<h2 id="接口是否可继承（extends）接口-抽象类是否可实现（implements）接口-抽象类是否可继承具体类（concrete-class）"><a href="#接口是否可继承（extends）接口-抽象类是否可实现（implements）接口-抽象类是否可继承具体类（concrete-class）" class="headerlink" title="接口是否可继承（extends）接口? 抽象类是否可实现（implements）接口? 抽象类是否可继承具体类（concrete class）?"></a>接口是否可继承（extends）接口? 抽象类是否可实现（implements）接口? 抽象类是否可继承具体类（concrete class）?</h2><ul>
+<li>接口可以继承接口。抽象类可以实现(implements)接口，抽象类可以继承具体类。抽象类中可以有静态的 main 方法。</li>
+<li>备注：只要明白了接口和抽象类的本质和作用，这些问题都很好回答，你想想，如果你是 java 语言的设计者，你是否会提供这样的支持，如果不提供的话，有什么理由吗？如果你没有道理不提供，那答案<br>就是肯定的了。只有记住抽象类与普通类的唯一区别就是不能创建实例对象和允许有abstract 方法。</li>
+</ul>
+<h2 id="一个“-java”源文件中是否可以包含多个类（不是内部类）？有什么限制？"><a href="#一个“-java”源文件中是否可以包含多个类（不是内部类）？有什么限制？" class="headerlink" title="一个“.java”源文件中是否可以包含多个类（不是内部类）？有什么限制？"></a>一个“.java”源文件中是否可以包含多个类（不是内部类）？有什么限制？</h2><ul>
+<li>可以，但一个源文件中最多只能有一个公开类（public class）而且文件名必须和公开类的类名完全保持一致。</li>
+</ul>
+<h2 id="Anonymous-Inner-Class-匿名内部类-是否可以继承其它类？是否可以实现接口？"><a href="#Anonymous-Inner-Class-匿名内部类-是否可以继承其它类？是否可以实现接口？" class="headerlink" title="Anonymous Inner Class(匿名内部类)是否可以继承其它类？是否可以实现接口？"></a>Anonymous Inner Class(匿名内部类)是否可以继承其它类？是否可以实现接口？</h2><ul>
+<li>可以继承其他类或实现其他接口，在 Swing 编程中常用此方式来实现事件监听和回调。 但是有一点需要注意，它只能继承一个类或一个接口。</li>
+</ul>
+<h2 id="内部类可以引用它的包含类（外部类）的成员吗？有没有什么限制？"><a href="#内部类可以引用它的包含类（外部类）的成员吗？有没有什么限制？" class="headerlink" title="内部类可以引用它的包含类（外部类）的成员吗？有没有什么限制？"></a>内部类可以引用它的包含类（外部类）的成员吗？有没有什么限制？</h2><ul>
+<li>一个内部类对象可以访问创建它的外部类对象的成员，包括私有成员。如果要访问外部类的局部变量，此时局部变量必须使用 final 修饰，否则无法访问。</li>
+</ul>
+<h2 id="Java-中的-final-关键字有哪些用法？"><a href="#Java-中的-final-关键字有哪些用法？" class="headerlink" title="Java 中的 final 关键字有哪些用法？"></a>Java 中的 final 关键字有哪些用法？</h2><ol>
+<li>修饰类：表示该类不能被继承；</li>
+<li>修饰方法：表示方法不能被重写但是允许重载；</li>
+<li>修饰变量：表示变量只能一次赋值以后值不能被修改（常量）；</li>
+<li>修饰对象：对象的引用地址不能变，但是对象的初始化值可以变。</li>
+</ol>
+<h2 id="创建对象时构造器的调用顺序是"><a href="#创建对象时构造器的调用顺序是" class="headerlink" title="创建对象时构造器的调用顺序是"></a>创建对象时构造器的调用顺序是</h2><ul>
+<li>先初始化静态成员，然后调用父类构造器，再初始化非静态成员，最后调用自身构造器。考点：静态代码块优先级 &gt; 构造方法的优先级</li>
+<li>如果再加一个普通代码块，优先顺序如下：静态代码块&gt;普通代码块&gt;构造方法</li>
+</ul>
+<h2 id="说说数据类型之间的转换"><a href="#说说数据类型之间的转换" class="headerlink" title="说说数据类型之间的转换:"></a>说说数据类型之间的转换:</h2><ol>
+<li>如何将字符串转换为基本数据类型？</li>
+</ol>
+<ul>
+<li>调用基本数据类型对应的包装类中的方法 parseXXX(String)或valueOf(String)即可返回相应基本类型；</li>
+</ul>
+<ol start="2">
+<li>如何将基本数据类型转换为字符串？</li>
+</ol>
+<ul>
+<li>一种方法是将基本数据类型与空字符串（””）连接（+）即可获得其所对应的字符串；另一种方法是调用 String 类中的 valueOf(…)方法返回相应字符串</li>
+</ul>
+<h2 id="如何实现字符串的反转及替换？"><a href="#如何实现字符串的反转及替换？" class="headerlink" title="如何实现字符串的反转及替换？"></a>如何实现字符串的反转及替换？</h2><ul>
+<li>：方法很多，可以自己写实现也可以使用 String 或 StringBuffer / StringBuilder 中的方法。有一道很常见的面试题是用递归实现字符串反转。</li>
+</ul>
+<h2 id="Java-中的日期和时间："><a href="#Java-中的日期和时间：" class="headerlink" title="Java 中的日期和时间："></a>Java 中的日期和时间：</h2><ol>
+<li>如何取得年月日、小时分钟秒？</li>
+<li>如何取得从 1970 年 1 月 1 日 0 时 0 分 0 秒到现在的毫秒数？</li>
+<li>如何取得某月的最后一天？</li>
+<li>如何格式化日期？</li>
+</ol>
+<ul>
+<li>操作方法如下所示：</li>
+</ul>
+<ol>
+<li><p>创建 java.util.Calendar 实例，调用其 get()方法传入不同的参数即可获得参数所对应的值</p>
+</li>
+<li><p>以下方法均可获得该毫秒数:</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Calendar.getInstance().getTimeInMillis(); </span><br><span class="line">System.currentTimeMillis();</span><br></pre></td></tr></table></figure>
+</li>
+<li><p>示例代码如下:</p>
+</li>
+</ol>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Calendar time = Calendar.getInstance();</span><br><span class="line">   System.out.println(time.getActualMaximum(Calendar.DAY_OF_MONTH));</span><br></pre></td></tr></table></figure>
+
+<ol start="4">
+<li>利用 java.text.DataFormat 的子类（如 SimpleDateFormat 类）中的format(Date)方法可将日期格式化。</li>
+</ol>
+<h2 id="Java-反射技术主要实现类有哪些，作用分别是什么？"><a href="#Java-反射技术主要实现类有哪些，作用分别是什么？" class="headerlink" title="Java 反射技术主要实现类有哪些，作用分别是什么？"></a>Java 反射技术主要实现类有哪些，作用分别是什么？</h2><ul>
+<li>JDK 中，主要由以下类来实现 Java 反射机制，这些类都位于java.lang.reflect 包中</li>
+</ul>
+<ol>
+<li>Class 类：代表一个类</li>
+<li>Field 类：代表类的成员变量(属性) </li>
+<li>Method 类：代表类的成员方法</li>
+<li>Constructor 类：代表类的构造方法</li>
+<li>Array 类：提供了动态创建数组，以及访问数组的元素的静态方法</li>
+</ol>
+<h2 id="Class-类的作用？生成-Class-对象的方法有哪些？"><a href="#Class-类的作用？生成-Class-对象的方法有哪些？" class="headerlink" title="Class 类的作用？生成 Class 对象的方法有哪些？"></a>Class 类的作用？生成 Class 对象的方法有哪些？</h2><ul>
+<li>Class 类是 Java 反射机制的起源和入口，用于获取与类相关的各种信息，提供了获取类信息的相关方法。Class 类继承自 Object 类Class 类是所有类的共同的图纸。每个类有自己的对象，好比图纸和实<br>物的关系；每个类也可看做是一个对象，有共同的图纸 Class，存放类的 结构信息，能够通过相应方法取出相应信息：类的名字、属性、方法、构造方法、父类和接口</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th align="center">方法</th>
+<th align="center">事例</th>
+</tr>
+</thead>
+<tbody><tr>
+<td align="center">对象名.getClass()</td>
+<td align="center">String str=”bdqn”;Class clazz = str.getClass();</td>
+</tr>
+<tr>
+<td align="center">对象名.getSuperClass()</td>
+<td align="center">Student stu = new Student();Class c1 = stu.getClass();Class c2 = stu.getSuperClass();</td>
+</tr>
+<tr>
+<td align="center">类名.class</td>
+<td align="center">Class c1 = String.class;Class c2 = Student.class;Class c2 = int.class</td>
+</tr>
+<tr>
+<td align="center">包装类.TYPE</td>
+<td align="center">Class c1 = Integer.TYPE;Class c2 = Boolean.TYPE;</td>
+</tr>
+</tbody></table>
+<h2 id="反射的使用场合和作用、及其优缺点"><a href="#反射的使用场合和作用、及其优缺点" class="headerlink" title="反射的使用场合和作用、及其优缺点"></a>反射的使用场合和作用、及其优缺点</h2><ol>
+<li>使用场合</li>
+</ol>
+<ul>
+<li>在编译时根本无法知道该对象或类可能属于哪些类，程序只依靠运行时信息来发现该对象和类的真实信息。</li>
+</ul>
+<ol start="2">
+<li>主要作用</li>
+</ol>
+<ul>
+<li>通过反射可以使程序代码访问装载到 JVM 中的类的内部信息，获取已装载类的属性信息，获取已装载类的方法，获取已装载类的构造方法信息</li>
+</ul>
+<ol start="3">
+<li>反射的优点</li>
+</ol>
+<ul>
+<li>反射提高了 Java 程序的灵活性和扩展性，降低耦合性，提高自适应能力。它允许程序创建和控制任何类的对象，无需提前硬编码目标类；反射是其它一些常用语言，如 C、C++、Fortran 或者 Pascal 等都不具备的.</li>
+</ul>
+<ol start="4">
+<li>Java 反射技术应用领域很广，如软件测试等；许多流行的开源框架例如Struts、Hibernate、Spring 在实现过程中都采用了该技术</li>
+<li>反射的缺点</li>
+</ol>
+<ul>
+<li>性能问题：使用反射基本上是一种解释操作，用于字段和方法接入时要远慢于直接代码。因此 Java 反射机制主要应用在对灵活性和扩展性要求很高的系统框架上,普通程序不建议使用。</li>
+<li>使用反射会模糊程序内部逻辑：程序人员希望在源代码中看到程序的逻辑，反射等绕过了源代码的技术，因而会带来维护问题。反射代码比相应的直接代码更复杂。</li>
+</ul>
+<h2 id="面向对象设计原则有哪些"><a href="#面向对象设计原则有哪些" class="headerlink" title="面向对象设计原则有哪些"></a>面向对象设计原则有哪些</h2><p>面向对象设计原则是面向对象设计的基石，面向对象设计质量的依据和保障，设计模式是面向对象设计原则的经典应用</p>
+<ol>
+<li>单一职责原则 SRP</li>
+<li>开闭原则 OCP</li>
+<li>里氏替代原则 LSP</li>
+<li>依赖注入原则 DIP</li>
+<li>接口分离原则 ISP</li>
+<li>迪米特原则 LOD</li>
+<li>组合/聚合复用原则 CARP</li>
+<li>开闭原则具有理想主义的色彩，它是面向对象设计的终极目标。其他设计原则都可以看作是开闭原则的实现手段或方法</li>
+</ol>
 
       
 
@@ -444,6 +760,15 @@
 
   
 <nav id="article-nav">
+  
+    <a href="/2019/10/22/Java面试之String相关篇/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Java面试之String相关篇
+        
+      </div>
+    </a>
   
   
     <a href="/2019/10/19/美团面试HashMap和TreeMap的区别/" id="article-nav-older" class="article-nav-link-wrap">
@@ -585,7 +910,7 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
               </li>
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color3">面试</a>
+                <a href="javascript:void(0)" class="js-tag color5">List</a>
               </li>
              
               <li class="article-tag-list-item">
@@ -606,6 +931,14 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color4">map</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">String</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">面试</a>
               </li>
             
             <div class="clearfix"></div>
